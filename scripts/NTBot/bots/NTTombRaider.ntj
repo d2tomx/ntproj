@@ -1,0 +1,234 @@
+var realtomb; 
+var count; 
+
+function NTMain() 
+{ 
+
+  var _target; 
+   Include("libs/common/NTCommon.ntl"); 
+   NTC_IncludeLibs(); 
+   NTC_IncludeConfig("NTBot/char_configs"); 
+
+   NT_LoadConfig(); 
+   NTSI_LoadNIPFiles("NTBot/item_configs"); 
+
+   NTA_Initialize(); 
+
+   if(!NTTM_CheckAct()) 
+   { 
+   NTC_SendMsgToScript("NTBotGame.ntj", "NTTM_CheckAct()"); 
+   return; 
+   } 
+
+   NTTMGR_TownManager(); 
+   if(!NTTM_TownMove("waypoint")) 
+   { 
+      NTC_SendMsgToScript("NTBotGame.ntj", "NTTM_TownMove()"); 
+      return; 
+   } 
+
+   if(!NTM_TakeWaypoint(46)) 
+   { 
+      NTC_SendMsgToScript("NTBotGame.ntj", "NTM_TakeWaypoint()"); 
+      return; 
+   } 
+
+   NTP_DoPrecast(true); 
+   var _taltomb; 
+   var _stair = [69, 68, 67, 66, 70, 71,72]; 
+
+   for(var i = 0; i < _stair.length; i++) 
+   { 
+       count = i; 
+      if(!NTM_MoveToStair(me.areaid, _stair[i])) 
+      { 
+         NTC_SendMsgToScript("NTBotGame.ntj", "NTM_MoveToStair()"); 
+         return; 
+      } 
+
+      if(!NTM_TakeStair(_stair[i])) 
+      { 
+         NTC_SendMsgToScript("NTBotGame.ntj", "NTM_TakeStair()"); 
+         return; 
+      } 
+
+      NT_FindTalChest(); 
+       
+      if(i != 6) 
+      { 
+
+           if(!NTM_MoveToStair(me.areaid, 46)) 
+         { 
+            NTC_SendMsgToScript("NTBotGame.ntj", "NTM_MoveToStair()"); 
+            return; 
+         } 
+
+         if(!NTM_TakeStair(46)) 
+         { 
+            NTC_SendMsgToScript("NTBotGame.ntj", "NTM_TakeStair()"); 
+            return; 
+         } 
+      } 
+      else if(me.areaid != realtomb && NTConfig_KillDuriel) 
+         NT_FindDuriel(); 
+      else 
+         NTC_SendMsgToScript("NTBotGame.ntj", "SCRIPT_END"); 
+            
+       
+
+   } 
+} 
+
+function NT_FindTalChest() 
+{ 
+   var pre = GetPresetUnits(me.areaid, NTC_UNIT_OBJECT); 
+   var chest; 
+   var chestx; 
+   var found; 
+
+   for (var i = 0; i < pre.length; i++) 
+   { 
+           if(pre[i].id == 397 || (pre[i].id >= 354 && pre[i].id <= 356) || (pre[i].id >= 405 && pre[i].id <= 407)) 
+      { 
+         chest = pre[i]; 
+         found = true; 
+         break; 
+
+      } 
+   } 
+    
+   if(found) 
+   { 
+      NTM_MoveTo(me.areaid,(chest.roomx*5 + chest.x),(chest.roomy*5+chest.y)); 
+      _taltomb = false; 
+   } 
+   else 
+   { 
+      realtomb = me.areaid; 
+      _taltomb = true; 
+   } 
+   if(_taltomb) 
+   { 
+      Print("This is the real tomb..."); 
+      if(count == 6 && NTConfig_KillDuriel) 
+      { 
+         Print("Let's kill Duriel"); 
+         if(!NTM_MoveToPresetUnit(me.areaid, NTC_UNIT_OBJECT, 152, -2, 2)) 
+         { 
+            return; 
+         } 
+         else 
+         { 
+
+            if(NTConfig_ClearPosition) 
+               NTA_ClearPosition(20, true); 
+
+            if(!NTTMGR_CheckSafe(NTConfig_CheckSelfSafe, NTConfig_CheckMercSafe)) 
+            { 
+               NTC_SendMsgToScript("NTBotGame.ntj", "NTTMGR_CheckSafe()"); 
+               return; 
+            } 
+
+            NTC_FindUnit(NTC_UNIT_OBJECT, 100, 10); 
+
+            if(!NTM_TakeUnit(NTC_UNIT_OBJECT, 100)) 
+            { 
+               NTC_SendMsgToScript("NTBotGame.ntj", "NTM_TakeUnit()"); 
+               return; 
+            } 
+
+            if(!NTA_KillMonster(211)) 
+            { 
+               NTC_SendMsgToScript("NTBotGame.ntj", "NTA_KillMonster()"); 
+               return; 
+            } 
+
+            NTSI_PickItems(); 
+
+            NTC_SendMsgToScript("NTBotGame.ntj", "SCRIPT_END"); 
+         } 
+      } 
+      else if(NTConfig_KillDuriel) 
+         Print("I'll remember that"); 
+          
+   } 
+   else 
+   {    
+      var _chest = NTC_FindUnit(NTC_UNIT_OBJECT, GetLocaleString(3260), 1); 
+
+      if(_chest) 
+          
+         do 
+         { 
+            if(GetDistance(me.x,me.y,_chest.x,_chest.y) < 5 ) 
+               if(NTC_OpenChest(_chest)) 
+               { 
+                  NTSI_PickItems(); 
+                  if(NTConfig_ClearChestPosition) 
+                     NTA_ClearPosition(20,true); 
+                  break; 
+               } 
+
+             
+         }while(_chest.GetNext()); 
+
+   } 
+} 
+function NT_FindDuriel() 
+{ 
+         if(!NTM_MoveToStair(me.areaid, 46)) 
+         { 
+            NTC_SendMsgToScript("NTBotGame.ntj", "NTM_MoveToStair()"); 
+            return; 
+         } 
+
+         if(!NTM_TakeStair(46)) 
+         { 
+            NTC_SendMsgToScript("NTBotGame.ntj", "NTM_TakeStair()"); 
+            return; 
+         } 
+          
+            if(!NTM_MoveToStair(me.areaid, realtomb)) 
+         { 
+            NTC_SendMsgToScript("NTBotGame.ntj", "NTM_MoveToStair()"); 
+            return; 
+         } 
+    
+         if(!NTM_TakeStair(realtomb)) 
+         { 
+            NTC_SendMsgToScript("NTBotGame.ntj", "NTM_TakeStair()"); 
+            return; 
+         } 
+         if(!NTM_MoveToPresetUnit(me.areaid, NTC_UNIT_OBJECT, 152, -2, 2)) 
+            { 
+               NTC_SendMsgToScript("NTBotGame.ntj", "NTM_MoveToPresetUnit()"); 
+               return; 
+            } 
+
+            if(NTConfig_ClearPosition) 
+               NTA_ClearPosition(20, true); 
+
+            if(!NTTMGR_CheckSafe(NTConfig_CheckSelfSafe, NTConfig_CheckMercSafe)) 
+            { 
+               NTC_SendMsgToScript("NTBotGame.ntj", "NTTMGR_CheckSafe()"); 
+               return; 
+            } 
+
+            NTC_FindUnit(NTC_UNIT_OBJECT, 100, 10); 
+
+            if(!NTM_TakeUnit(NTC_UNIT_OBJECT, 100)) 
+            { 
+               NTC_SendMsgToScript("NTBotGame.ntj", "NTM_TakeUnit()"); 
+               return; 
+            } 
+
+            if(!NTA_KillMonster(211)) 
+            { 
+               NTC_SendMsgToScript("NTBotGame.ntj", "NTA_KillMonster()"); 
+               return; 
+            } 
+
+            NTSI_PickItems(); 
+
+            NTC_SendMsgToScript("NTBotGame.ntj", "SCRIPT_END"); 
+} 

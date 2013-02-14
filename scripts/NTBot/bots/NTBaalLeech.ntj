@@ -1,0 +1,65 @@
+function NTMain()
+{
+   
+   Include("libs/common/NTCommon.ntl");
+   NTC_IncludeLibs();
+   NTC_IncludeConfig("NTBot/char_configs");
+
+   NT_LoadConfig();
+   NTSI_LoadNIPFiles("NTBot/item_configs");
+
+   NTA_Initialize(); // 10
+
+   var _leader = ""; // Der genaue Name des Leader-Chars - nicht der Name vom Account!!!
+   
+   if(!NTTM_CheckAct())
+   {
+      NTC_SendMsgToScript("NTBotGame.ntj", "NTTM_CheckAct()");
+      return;
+   }
+
+   if(me.areaid != 109)
+   {
+   if(!NTTM_TownMove("waypoint"))
+   {
+      NTC_SendMsgToScript("NTBotGame.ntj", "NTTM_TownMove()");
+      return;
+   }
+
+   if(!NTM_TakeWaypoint(109))
+   {
+      NTC_SendMsgToScript("NTBotGame.ntj", "NTM_TakeWaypoint()");
+      return;
+   }
+   }
+      
+   NTTMGR_TownManager();
+   
+   NTTM_TownMove("portalspot");
+
+   for(i = 0; i <= 100; i++)
+   {
+      if(NTC_InMyParty(_leader))
+         break;
+
+      Delay(200);
+   }   
+
+   while(me.areaid == 109 && NTC_InMyParty(_leader))
+   {
+      NTM_UsePortal("BluePortal", 131, _leader); // 50
+      Delay(5000);
+      
+   }
+   
+   NTP_DoPrecast(true);
+
+   while(NTC_InMyParty(_leader))
+   {
+      Delay(1000);
+   }
+
+
+   NTC_SendMsgToScript("NTBotGame.ntj", "SCRIPT_END");
+
+}

@@ -1,0 +1,20 @@
+
+function NTMain()
+{
+Include("libs/common/NTCommon.ntl");
+NTC_IncludeLibs();
+NTC_IncludeConfig("NTBot/char_configs");
+
+NT_LoadConfig();
+NTSI_LoadNIPFiles("NTBot/item_configs");
+
+NTA_Initialize();
+
+var _abc = 1
+while(_abc ==1)
+{
+Print (me.x);
+Print (me.y);
+Delay(5000);
+}
+} 

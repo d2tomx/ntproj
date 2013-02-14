@@ -1,0 +1,2190 @@
+//-----------------------------------------------
+//按 Ctrl+F 来搜寻指定的区域
+//稀有装备 - [r01]
+//魔法装备 - [m01]
+//珠宝 - [j01]
+//护符 - [c01]
+//独特装备 - [u01]
+//套装 - [s01]
+//符文 - [ru01]
+//白装 - [wh01] 武器 [ww01] / 盔甲 [wa01]
+//药水 - [rj01]
+//钥匙 - [ke01]
+//精华 - [es01]
+//-----------------------------------------------
+
+//*****杂物 部份*****
+[Name] == gold # [14] >= 800
+//金币(800以上)
+//[Name] == Chipped Diamond
+//碎裂的钻石
+//[Name] == Chipped Ruby
+//碎裂的红宝石
+//[Name] == Chipped Topaz
+//碎裂的黄宝石
+//[Name] == Chipped Emerald
+//碎裂的绿宝石
+//[Name] == Chipped Sapphire
+//碎裂的蓝宝石
+//[Name] == Chipped Amethyst
+//碎裂的紫宝石
+//[Name] == Chipped Skull
+//碎裂的骷髅
+//[Name] == Flawed Diamond
+//裂开的钻石
+//[Name] == Flawed Ruby
+//裂开的红宝石
+//[Name] == Flawed Topaz
+//裂开的黄宝石
+//[Name] == Flawed Emerald
+//裂开的绿宝石
+//[Name] == Flawed Sapphire
+//裂开的蓝宝石
+//[Name] == Flawed Amethyst
+//裂开的紫宝石
+//[Name] == Flawed Skull
+//裂开的骷髅
+//[Name] == Normal Diamond
+//钻石
+//[Name] == Normal Ruby
+//红宝石
+//[Name] == Normal Topaz
+//黄宝石
+//[Name] == Normal Emerald
+//绿宝石
+//[Name] == Normal Sapphire
+//蓝宝石
+//[Name] == Normal Amethyst
+//紫宝石
+//[Name] == Normal Skull
+//骷髅
+//[Name] == Flawless Diamond
+//无瑕疵的钻石
+//[Name] == Flawless Ruby
+//无瑕疵的红宝石
+//[Name] == Flawless Topaz
+//无瑕疵的黄宝石
+//[Name] == Flawless Emerald
+//无瑕疵的绿宝石
+//[Name] == Flawless Sapphire
+//无瑕疵的蓝宝石
+//[Name] == Flawless Amethyst
+//无瑕疵的紫宝石
+//[Name] == Flawless Skull
+//无瑕疵的骷髅
+//[Name] == Perfect Diamond
+//完美的钻石
+//[Name] == Perfect Ruby
+//完美的红宝石
+//[Name] == Perfect Topaz
+//完美的黄宝石
+//[Name] == Perfect Emerald
+//完美的绿宝石
+//[Name] == Perfect Sapphire
+//完美的蓝宝石
+//[Name] == Perfect Amethyst
+//完美的紫宝石
+//[Name] == Perfect Skull
+//完美的骷髅
+//[Name] == Amulet && [Quality] == Magic && [Level] >= 94
+//蓝色项链
+//[Name] == Light Belt && [Quality] == Magic && [Level] >= 94
+//蓝色轻扣带
+//[Name] == Sharkskin Belt && [Quality] == Magic && [Level]>=94
+//蓝色鲨皮腰带
+//[Name] == Vampirefang Belt && [Quality] == Magic && [Level] >= 94
+//蓝色吸血鬼燎牙腰带
+//[Name] == Chain Gloves && [Quality] == Magic && [Level] >=90
+//蓝色锁炼手套
+//[Name] == Heavy Bracers && [Quality] == Magic && [Level] >=90
+//蓝色重型手镯
+//[Name] == Vambraces && [Quality] == Magic && [Level] >=90
+//蓝色吸血鬼手套
+//[Type] == Jewel && [Quality] == Magic
+//蓝色珠宝
+
+//****** 独特装备 部份 ****** [u01]
+
+//*****头盔*****
+//[Name] == War Hat && [Quality] == Unique
+//粗野之冠
+//[Name] == Casque && [Quality] == Unique
+//偷取骷髅
+[Name] == Grand Crown && [Quality] == Unique && [Flag] != ethereal # [itemgoldbonus] == 100
+//盗贼皇冠(100%打钱，有形)
+[Name] == Grim Helm && [Quality] == Unique # [LifeLeech] >= 6
+//吸血鬼的凝视
+[Name] == Shako && [Quality] == Unique # [80] == 50
+//谐角之冠
+[Name] == Spired Helm && [Quality] == Unique && [Flag] != ethereal # [passivecoldmastery] >= 13
+//夜翼面纱(减冰伤13%以上，有形)
+[Name] == Demonhead && [Quality] == Unique && [Flag] == ethereal
+//安达利尔的面貌(无形)
+[Name] == Demonhead && [Quality] == Unique && [Flag] != ethereal # [60] >= 8 && [Strength] == 30
+//安达利尔的面貌(8%吸命以上，30力，有形)
+[Name] == Corona && [Quality] == Unique # [Sockets] == 2
+//年纪之冠(2洞)
+//[Name] == Bone Visage && [Quality] == Unique # [Strength] >= 30 && [Sockets] == 2
+//巨骷髅(2洞，30力以上)
+[Name] == Tiara && [Quality] == Unique && [Flag] != ethereal # [39] == 70 && [41] == 70 && [43] == 70 && [45] == 70
+//奇拉的守护(70抗，有形)
+[Name] == Diadem && [Quality] == Unique && [Flag] != ethereal
+//格利风之眼(有形)
+
+//*****盔甲*****
+[Name] == Serpentskin Armor && [Quality] == Unique && [Flag] != ethereal # [39] == 35
+//蛇魔法师之皮(35抗以上，有形)
+[Name] == Cuirass && [Quality] == Unique && [Flag] == ethereal # [EnhancedDefense] >= 190
+//都瑞尔的壳(190%ED以上，无形)
+[Name] == Mesh Armor && [Quality] == Unique # [EnhancedDefense] >= 220
+//谢夫特斯坦布(有形220%ED)
+[Name] == Mesh Armor && [Quality] == Unique && [Flag] == ethereal # [EnhancedDefense] >= 210
+//谢夫特斯坦布(无形210%ED以上)
+[Name] == Russet Armor && [Quality] == Unique && [Flag] == ethereal
+//诗寇蒂的愤怒(无形)
+[Name] == Templar Coat && [Quality] == Unique && [Flag] == ethereal
+//守护天使(无形)
+[Name] == Sharktooth Armor && [Quality] == Unique && [Flag] == ethereal
+//排齿(无形)
+//[Name] == Dusk Shroud && [Quality] == Unique && [Flag] != ethereal # [skillfirebolt] == 3 && [passivefiremastery] == 15
+//奥玛斯的长袍(+3火弹，15%火伤，有形)
+//[Name] == Dusk Shroud && [Quality] == Unique && [Flag] != ethereal # [skilliceblast] == 3 && [passivecoldmastery] == 15
+//奥玛斯的长袍(+3冰弹，15%冰伤，有形)
+[Name] == Dusk Shroud && [Quality] == Unique && [Flag] != ethereal # [skillfireball] == 3 && [passivefiremastery] == 15
+//奥玛斯的长袍(+3火球，15%火伤，有形)
+[Name] == Dusk Shroud && [Quality] == Unique && [Flag] != ethereal # [skillenchant] == 3 && [passivefiremastery] == 15
+//奥玛斯的长袍(+3强化，15%火伤，有形)
+[Name] == Dusk Shroud && [Quality] == Unique && [Flag] != ethereal # [skillchainlightning] == 3 && [passiveltngmastery] == 15
+//奥玛斯的长袍(+3连锁闪电，15%电伤，有形)
+[Name] == Dusk Shroud && [Quality] == Unique && [Flag] != ethereal # [SkillMeteor] == 3 && [passivefiremastery] == 15
+//奥玛斯的长袍(+3陨石，15%火伤，有形)
+[Name] == Dusk Shroud && [Quality] == Unique && [Flag] != ethereal # [skillblizzard] == 3 && [passivecoldmastery] == 15
+//奥玛斯的长袍(+3暴风雪，15%冰伤，有形)
+[Name] == Dusk Shroud && [Quality] == Unique && [Flag] != ethereal # [passivecoldmastery] == 15 && [passivefiremastery] == 15 && [passiveltngmastery] == 15
+//奥玛斯的长袍(15%火、冰、电伤，有形)
+//[Name] == Balrog Skin && [Quality] == Unique && [Flag] != ethereal # [itemallskills] == 2
+//阿凯尼的荣耀(2技，有形)
+//[Name] == Balrog Skin && [Quality] == Unique && [Flag] == ethereal
+//阿凯尼的荣耀(无形)
+//[Name] == Kraken Shell && [Quality] == Unique # [Strength] >= 45 && [DamageResist] == 25
+//海王利维亚桑(25%减伤，45力以上)
+[Name] == Shadow Plate && [Quality] == Unique && [Flag] == ethereal
+//钢铁铠甲(无形)
+[Name] == Sacred Armor && [Quality] == Unique
+//神圣盔甲
+
+//*****盾牌*****
+//[Name] == Round Shield && [Quality] == Unique
+//摩西祝福之环
+[Name] == Grim Shield && [Quality] == Unique # [EnhancedDefense] == 130 && [138] == 5
+//警戒之墙(顶)
+[Name] == Monarch && [Quality] == Unique
+//暴风之盾
+//[Name] == Troll Nest && [Quality] == Unique && [Flag] == ethereal # [Sockets] == 3
+//猎头人的荣耀
+
+//*****手套*****
+[Name] == Chain Gloves && [Quality] == Unique # [80] == 40
+//运气守护(40%打宝)
+[Name] == Light Gauntlets && [Quality] == Unique # [EnhancedDefense] == 30
+//法师之拳(30%ED)
+//[Name] == Gauntlets && [Quality] == Unique
+//霜燃
+[Name] == Vampirebone Gloves && [Quality] == Unique # [LifeLeech] == 10 && [Strength] == 15
+//卓古拉之握(吸10命，15力)
+[Name] == Ogre Gauntlets && [Quality] == Unique
+//碎钢
+
+//*****鞋子*****
+//[Name] == Boots && [Quality] == Unique
+//热靴刺
+//[Name] == Demonhide Boots && [Quality] == Unique # [EnhancedDefense] >= 150 && [itemgoldbonus] == 70
+//地狱阔步(70%打钱)
+[Name] == Sharkskin Boots && [Quality] == Unique && [Flag] != ethereal # [MaxHP] == 65
+//水上飘(65命，有形)
+[Name] == Mesh Boots && [Quality] == Unique && [Flag] != ethereal # [EnhancedDefense] == 190
+//沙织(有形顶)
+[Name] == Battle Boots && [Quality] == Unique && [Flag] != ethereal # [80] >= 45
+//战争旅者(45%以上打宝)
+[Name] == War Boots && [Quality] == Unique && [Flag] != ethereal # [EnhancedDefense] == 200
+//蚀肉骑士(有形顶)
+[Name] == Scarabshell Boots && [Quality] == Unique && [Flag] != ethereal # [Strength] == 15 && [Vitality] == 15
+//沙暴之旅(15力，15体，有形)
+[Name] == Scarabshell Boots && [Quality] == Unique && [Flag] == ethereal
+//沙暴之旅(无形)
+[Name] == Boneweave Boots && [Quality] == Unique && [Flag] != ethereal # [skillskeletonmastery] == 2 && [Strength] == 20
+//骨随行走(2技，20力，有形)
+[Name] == Myrmidon Greaves && [Quality] == Unique && [Flag] != ethereal # [Dexterity] == 25
+//影舞者(25敏，有形)
+
+//*****腰带*****
+[Name] == Heavy Belt && [Quality] == Unique && [Flag] != ethereal # [itemgoldbonus] == 80
+//金色包袱(80%打宝，有形)
+[Name] == Demonhide Sash && [Quality] == Unique && [Flag] != ethereal # [EnhancedDefense] == 180 && [LifeLeech] == 8 && [DamageResist] == 15 && [Magicdamagereduction] == 15
+//长串之耳(有形顶)
+[Name] == Mesh Belt && [Quality] == Unique && [Flag] != ethereal # [EnhancedDefense] == 150
+//阴影陷阱(有形顶)
+[Name] == Battle Belt && [Quality] == Unique && [Flag] != ethereal # [EnhancedDefense] == 170
+//雪之冲突(有形顶)
+[Name] == War Belt && [Quality] == Unique && [Flag] != ethereal # [EnhancedDefense] >= 200
+//雷神之力(有形顶)
+[Name] == Spiderweb Sash && [Quality] == Unique && [Flag] != ethereal
+//蜘蛛之网(有形)
+[Name] == Vampirefang Belt && [Quality] == Unique # [LifeLeech] == 7
+//吸血圣王之圈
+[Name] == Mithril Coil && [Quality] == Unique && [Flag] != ethereal # [Vitality] == 40 && [DamageResist] == 15
+//维尔登戈的心结(40体，15%减伤)
+
+//*****刀剑*****
+//[Name] == Champion Sword && [Quality] == Unique # [EnhancedDamage] == 250 && [ManaLeech] == 7
+//末日毁灭者(250%ED，吸7法)
+//[Name] == Colossus Blade && [Quality] == Unique # [EnhancedDamage] >= 230
+//祖父(230%ED以上)
+//[Name] == Phase Blade && [Quality] == Unique
+//光之军刀(也可能是青色忿怒)
+
+//*****斧头*****
+//[Name] == Ettin Axe && [Quality] == Unique && [Flag] == ethereal # [EnhancedDamage] == 270 && [Sockets] == 5
+//符文大师(5洞，无形顶)
+//[Name] == Berserker Axe && [Quality] == Unique && [Flag] != ethereal # [EnhancedDamage] == 280
+//死亡之刀(280%ED，有形)
+[Name] == Berserker Axe && [Quality] == Unique && [Flag] == ethereal
+//死亡之刀(无形)
+
+//*****弓箭*****
+[Name] == Hydra Bow && [Quality] == Unique
+//风之力
+
+//*****匕首*****
+[Name] == Fanged Knife && [Quality] == Unique # [EnhancedDamage] >= 280
+//裂肉者(280%ED以上)
+//[Name] == Bone Knife && [Quality] == Unique # [39] == 75
+//巫师之刺
+
+//*****钉头锤*****
+//[Name] == Scourge && [Quality] == Unique && [Flag] == ethereal # [IAS] == 30
+//暴风之结(无形)
+//[Name] == Thunder Maul && [Quality] == Unique && [Flag] == ethereal # [105] == 10
+//大地变形者(无形)
+//[Name] == Thunder Maul && [Quality] == Unique && [Flag] == ethereal # [Strength] == 25
+//碎脑锤(25力，无形)
+
+//*****长斧*****
+//[Name] == Ogre axe && [Quality] == Unique && [Flag] == ethereal # [EnhancedDamage] == 320
+//破骨(320%ED，无形)
+[Name] == Thresher && [Quality] == Unique && [Flag] == ethereal # [EnhancedDamage] >= 200
+//死神的丧钟(200%ED以上，无形)
+[Name] == Thresher && [Quality] == Unique && [Flag] != ethereal # [EnhancedDamage] >= 220
+//死神的丧钟(220%ED以上，有形)
+//[Name] == Cryptic Axe && [Quality] == Unique && [Flag] == ethereal
+//盗墓者(无形)
+[Name] == Cryptic Axe && [Quality] == Unique && [Flag] == ethereal # [Sockets] == 3
+//盗墓者(3洞，无形)
+[Name] == Giant Thresher && [Quality] == Unique # [EnhancedDamage] == 250
+//暴风尖塔(250%ED)
+
+//*****权杖*****
+[Name] == Mighty Scepter && [Quality] == Unique # [EnhancedDamage] >= 295 && [Paladin skills] >= 2 && [Sockets] == 2
+//天堂之光(295%ED以上、+2以上圣骑技能、2洞)
+[Name] == Caduceus && [Quality] == Unique # [EnhancedDamage] >= 240 && [itemaddpalicombatskilltab] == 4
+//爱斯特龙之铁的保护区(240%ED以上、+4圣骑战斗技能)
+
+//*****长枪*****
+//[Name] == Yari && [Quality] == Unique && [Flag] == ethereal
+//宏森丹(无形)
+[Name] == Yari && [Quality] == Unique && [Flag] == ethereal # [EnhancedDamage] >= 195
+//宏森丹(195%ED以上，无形)
+//[Name] == Fuscina && [Quality] == Unique && [Flag] == ethereal
+//水魔陷阱(无形)
+[Name] == Fuscina && [Quality] == Unique && [Flag] == ethereal # [EnhancedDamage] == 180
+//水魔陷阱(180%ED，无形)
+//[Name] == War Pike && [Quality] == Unique
+//铁柱
+
+//*****法杖*****
+//[Name] == Elder Staff && [Quality] == Unique # [FCR] == 45
+//安戴尔的智慧
+[Name] == Quarter Staff && [Quality] == Unique && [Flag] == ethereal
+//肋骨粉碎者(无形)
+[Name] == Quarter Staff && [Quality] == Unique && [Flag] != ethereal # [EnhancedDamage] == 300
+//肋骨粉碎者(有形顶)
+
+//*****飞掷武器*****
+//[Name] == Winged Knife && [Quality] == Unique && [Flag] == ethereal
+//战争之鸟(无形)
+//[Name] == Winged Axe && [Quality] == Unique && [Flag] == ethereal
+//撕裂者(无形)
+
+//*****魔杖*****
+//[Name] == Grim Wand && [Quality] == Unique
+//乌米的恸哭
+//[Name] == Burnt Wand && [Quality] == Unique
+//自杀支系
+//[Name] == Tomb Wand && [Quality] == Unique # [FCR] == 10
+//李奥瑞克王的武器
+//[Name] == Grave Wand && [Quality] == Unique
+//黑手之钥
+[Name] == Lich Wand && [Quality] == Unique # [FCR] == 25
+//白骨阴影
+[Name] == Unearthed Wand && [Quality] == Unique
+//死亡之网
+
+//*****标枪*****
+[Name] == Ceremonial Javelin && [Quality] == Unique && [Flag] != ethereal # [EnhancedDefense] >= 190
+//泰坦的复仇(有形190%ED以上)
+[Name] == Ceremonial Javelin && [Quality] == Unique && [Flag] == ethereal
+//泰坦的复仇(无形)
+//[Name] == Matriarchal Javelin && [Quality] == Unique && [Flag] == ethereal # [javelinandspearskilltab] == 4
+//+4技雷击(无形)
+
+//*****爪*****
+//[Name] == Greater Talons && [Quality] == Unique # [EnhancedDamage] == 200
+//巴特克的猛击(200%ED)
+
+//*****死灵盾*****
+[Name] == Hierophant Trophy && [Quality] == Unique && [Flag] != ethereal # [EnhancedDefense] == 200
+//侏儒(200%ED，有形)
+[Name] == Succubus Skull && [Quality] == Unique
+//骨焰
+[Name] == Bloodlord Skull && [Quality] == Unique
+//魔力肇生
+
+//*****野人头*****
+[Name] == Slayer Guard && [Quality] == Unique # [EnhancedDefense] == 200
+//亚瑞特的面容(200%ED)
+
+//*****法师专用杖*****
+[Name] == Swirling Crystal && [Quality] == Unique
+//眼球
+[Name] == Eldritch Orb && [Quality] == Unique # [Sorceress Skills] == 3
+//艾斯屈塔的脾气(+3技)
+[Name] == Dimensional Shard && [Quality] == Unique
+//死亡深度
+
+//*****德鲁伊头*****
+[Name] == Totemic Mask && [Quality] == Unique # [EnhancedDefense] == 200
+//加尔的长发(200%ED)
+//[Name] == Blood Spirit && [Quality] == Unique
+//地狱之吻
+//[Name] == Earth Spirit && [Quality] == Unique
+//灵魂看守者
+//[Name] == Sky Spirit && [Quality] == Unique
+//乌鸦之王
+
+//*****圣骑盾*****
+[Name] == Gilded Shield && [Quality] == Unique # [EnhancedDefense] >= 150
+//撒卡兰姆使者
+//[Name] == Gilded Shield && [Quality] == Unique && [Flag] == ethereal # [EnhancedDefense] == 200
+//撒卡兰姆使者(无形)
+
+//*****戒指*****
+[Type] == ring && [Quality] == Unique # [80] >= 30
+//拿各的戒指
+[Type] == ring && [Quality] == Unique # [77] == 25
+//乔丹之石
+[Type] == ring && [Quality] == Unique # [MaxHP] == 40 && [MagicDamageReduction] >= 15
+//矮人之星
+[Type] == ring && [Quality] == Unique # [2] >= 15 && [Tohit] >= 150
+//乌鸦之霜
+[Type] == ring && [Quality] == Unique # [60] >= 3 && [127] == 1
+//布尔凯索之戒
+[Type] == ring && [Quality] == Unique # [LifeLeech] >= 9 && [ArmorClassVSMissile] >= 160
+//腐肉之风
+[Type] == ring && [Quality] == Unique # [ItemAbsorbLightPercent] >= 20 && [ItemMagicBonus] >= 20
+//鬼火投射者
+[Type] == ring && [Quality] == Unique # [PoisonResist] >= 30 && [NormalDamageReduction] >= 11
+//大自然的和平
+
+//*****项链*****
+[Type] == amulet && [Quality] == Unique # [0] == 12 && [43] == 25
+//萨拉森的机会
+//[Type] == amulet && [Quality] == Unique # [2] == 25
+//猫眼
+//[Type] == amulet && [Quality] == Unique # [45] == 75
+//亚特玛的圣甲虫
+[Type] == amulet && [Quality] == Unique # [74] == 10
+//旭日东升
+[Type] == amulet && [Quality] == Unique # [41] == 35
+//大君之怒
+[Type] == amulet && [Quality] == Unique # [0] == 5 && [43] >= 20
+//马拉的万花筒
+[Type] == amulet && [Quality] == Unique # [19] >= 400
+//金属网格
+//[Type] == amulet && [Quality] == Unique # [62] >= 12 && [60] >= 4
+//新月
+[Type] == amulet && [Quality] == Unique # [DefensiveAurasSkillTab] == 2
+//炽天使之韵
+
+//*****护符*****
+[Name] == Small charm && [Quality] == Unique
+//毁灭小符
+[Name] == Large Charm && [Quality] == Unique
+//地狱火炬
+[Name] == Grand charm && [Quality] == Unique # [79] >= 150 && [80] >= 35 && [87] >= 13
+//吉黑得的运气(打钱150%以上、打宝35%以上、13%以上商人)
+//[Name] == Grand charm && [Quality] == Unique # [79] == 160 && [80] == 40 && [87] == 15
+//完美吉黑得
+//[Name] == Grand charm && [Quality] == Unique # [80] == 40 && [87] == 15
+//吉黑得(40%打宝，15%商人)
+
+//*****彩虹刻面*****
+[Name] == jewel && [Quality] == Unique # [329] >= 3 && [333] >= 3
+//火
+[Name] == jewel && [Quality] == Unique # [330] >= 3 && [334] >= 3
+//电
+[Name] == jewel && [Quality] == Unique # [331] >= 3 && [335] >= 3
+//冰
+[Name] == jewel && [Quality] == Unique # [332] >= 3 && [336] >= 3
+//毒
+
+
+//***** 套装 部份 ***** [s01]
+// #####  天上的衣服  Angelic Raiment  ###############
+//[Name] == Ring Mail && [Quality] == set # [EnhancedDefense] == 40
+//天使的披风
+//[Name] == Sabre && [Quality] == set # [122] == 250
+//天使的镰刀
+//[Type] == ring && [Quality] == set # [MaxHP] == 20
+//天使之光
+//[Type] == amulet && [Quality] == set # [ItemLightRadius] == 3 && [ItemDamageToMana] == 20
+//天使之翼
+
+// #####  阿卡娜的诡计  Arcanna's Tricks  ##############
+//[Name] == Skull Cap && [Quality] == set # [74] == 4
+//阿卡娜的头
+//[Name] == Light Plate && [Quality] == set # [89] == 2 && [34] == 3
+//阿卡娜的血肉
+//[Name] == War Staff && [Quality] == set # [sorceressskills] == 1 && [141] == 25
+//阿卡娜的死亡之杖
+//[Type] == amulet && [Quality] == set # [26] == 20 && [MaxMana] == 15
+//阿卡娜的符号
+
+// #####  北极装置  Arctic Gear  ###################
+//[Name] == Quilted Armor && [Quality] == set # [EnhancedDefense] == 325
+//北极毛皮
+//[Name] == Light Belt && [Quality] == set # [43] == 40
+//北极捆缚
+//[Name] == Light Gauntlets && [Quality] == set # [MaxHP] == 20 && [IAS] == 10
+//北极手套
+//[Name] == Short War Bow && [Quality] == set # [EnhancedDamage] == 50
+//北极号角
+
+// #####  狂战士的军火库  Berserker's Arsenal  ############
+//[Name] == Helm && [Quality] == set # [39] == 25
+//狂战士的头戴
+//[Name] == Splint Mail && [Quality] == set # [barbarianskills] == 1
+//狂战士的锁子甲
+//[Name] == Double Axe && [Quality] == set # [ManaLeech] == 5
+//狂战士的手斧
+
+// #####  卡珊的陷阱  Cathan's Traps  ################
+//[Name] == Mask && [Quality] == set # [43] == 25
+//卡珊的容貌
+//[Name] == Chain Mail && [Quality] == set # [31] == 15
+//卡珊之网
+//[Name] == Battle Staff  && [Quality] == set # [fireskilltab] == 1
+//卡珊之尺
+//[Type] == amulet && [Quality] == set # [FHR] == 10 && [LightMaxDam] == 5
+//卡珊的魔咒
+//[Type] == ring && [Quality] == set # [LifeLeech] == 6 && [34] == 2
+//卡珊的封印
+
+// #####  希弗柏的法衣  Civerb's Vestments  #############
+//[Name] == Grand Scepter && [Quality] == set # [122] == 50
+//希弗柏的短棍
+//[Type] == amulet && [Quality] == set # [26] == 40 && [74] == 4
+//希弗柏的图案
+//[Name] == Large Shield && [Quality] == set # [31] == 15
+//希弗柏的防护
+
+// #####  克雷得劳的支柱  Cleglaw's Brace  ###############
+//[Name] == Long Sword && [Quality] == set # [141] == 50
+//克雷得劳之牙
+//[Name] == Chain Gloves && [Quality] == set # [150] == 25
+//克雷得劳之钳
+//[Name] == Small Shield && [Quality] == set # [31] == 17
+//克雷得劳之爪
+
+// ##### 死亡的伪装  Death's Disguise ##############
+//[Name] == War Sword && [Quality] == set # [EnhancedDamage] == 25 && [LifeLeech] == 4
+//死亡之触
+//[Name] == Leather Gloves && [Quality] == set # [45] == 50
+//死亡之手
+//[Name] == Sash && [Quality] == set # [31] == 20
+//死亡的守护
+
+// #####  哈斯拉柏的防御  Hsaru's Defense  ###############
+//[Name] == Buckler && [Quality] == set # [Strength] == 10
+//哈斯拉柏的铁拳
+//[Name] == Belt && [Quality] == set # [43] == 20 && [MaxHP] == 20
+//哈斯拉柏的铁胸衣
+//[Name] == Chain Boots && [Quality] == set # [39] == 25
+//哈斯拉柏的铁后跟
+
+// #####  地狱的工具  Infernal Tools  ################
+//[Name] == Cap && [Quality] == set # [39] == 10 && [41] == 10 && [43] == 10 && [45] == 10
+//地狱头骨
+//[Name] == Heavy Belt && [Quality] == set # [MaxHP] == 20 && [31] == 25
+//地狱符号
+//[Name] == Grim Wand && [Quality] == set # [necromancerskills] == 1
+//地狱火炬
+
+// #####  依雷撒的精铣炉  Iratha's Finery  ###############
+//[Name] == Crown && [Quality] == set # [39] == 30 && [41] == 30
+//依雷撒的线圈
+//[Type] == amulet && [Quality] == set # [45] == 30 && [PoisonLength] == -75
+//依雷撒的项圈
+//[Name] == Heavy Belt && [Quality] == set # [MinDamage] == 5 && [31] == 25
+//依雷撒之绳
+//[Name] == Light Gauntlets && [Quality] == set # [43] == 30
+//依雷撒的袖口
+
+// #####  依森哈德的武器室  Isenhart's Armory  #############
+//[Name] == Broad Sword && [Quality] == set # [MinDamage] == 10 && [IAS] == 20
+//依森哈德的光之烙铁
+//[Name] == Full Helm && [Quality] == set # [34] == 2 && [Dexterity] == 6
+//依森哈德的号角
+//[Name] == Breast Plate && [Quality] == set # [35] == 2 && [31] == 40
+//依森哈德的外壳
+//[Name] == Gothic Shield && [Quality] == set # [128] == 4 && [31] == 40
+//依森哈德的闪避
+
+// #####  米拉伯佳的雪茄  Milabrega's Regalia  ###########
+//[Name] == Crown && [Quality] == set # [MaxHP] == 15 && [MaxMana] == 15
+//米拉伯佳的王冠
+//[Name] == Ancient Armor && [Quality] == set # [34] == 2 && [78] == 3
+//米拉伯佳之袍
+//[Name] == Kite Shield && [Quality] == set # [31] == 25 && [80] == 20
+//米拉伯佳之球
+//[Name] == War Scepter && [Quality] == set # [EnhancedDamage] == 50 && [Paladinskills] == 1
+//米拉伯佳之杖
+
+// #####  西刚的全套刀剑  Sigon's Complete Steel  #################
+//[Name] == Great Helm && [Quality] == set # [31] == 25 && [MaxMana] == 30
+//西刚之面甲
+//[Name] == Gothic Plate && [Quality] == set # [EnhancedDefense] == 25 && [41] == 30
+//西刚的遮蔽
+//[Name] == Greaves && [Quality] == set # [FRW] == 20 && [43] == 40
+//西刚的木鞋
+//[Name] == Tower Shield && [Quality] == set # [ItemAddSkillTab] == 1 && [20] == 20
+//西刚的守护
+//[Name] == Plated Belt && [Quality] == set # [39] == 20 && [MaxHP] == 20
+//西刚的披肩
+//[Name] == Gauntlets && [Quality] == set # [19] == 20 && [Strength] == 10
+//西刚的挑战
+
+// #####  坦克雷的战斗工具  Tancred's Battlegear  ##########
+//[Name] == Bone Helm && [Quality] == set # [EnhancedDamage] == 10 &&  # [19] == 40
+//坦克雷之骷髅
+//[Name] == Full Plate Mail && [Quality] == set # [MaxHP] == 40 && [Strength] == 15
+//坦克雷的脊柱
+//[Name] == Boots && [Quality] == set # [28] == 25 && [Dexterity] == 10
+//坦克雷的平头钉
+//[Name] == Military Pick && [Quality] == set # [EnhancedDamage] == 80 && [19] == 75
+//坦克雷的鸦嘴钳
+//[Type] == amulet && [Quality] == set # [35] == 1 && [34] == 2
+//坦克雷的怪诞
+
+// #####  维达拉的配备  Vidala's Rig  ##################
+//[Name] == Long Battle Bow && [Quality] == set # [LightMinDam] == 1 && [LightMaxDam] == 20
+//维达拉之倒刺
+//[Name] == Leather Armor && [Quality] == set # [31] == 50 && [Dexterity] == 11
+//维达拉的突袭
+//[Name] == Light Plated Boots && [Quality] == set # [FRW] == 30
+//维达拉的距毛
+//[Type] == amulet && [Quality] == set # [43] == 20 && [MaxHP] == 15
+//维达拉的陷阱
+
+// #####  艾尔多的守卫-德鲁依专属套装  Aldur's Watchtower-Druid Set  ############
+//[Name] == Hunter's Guise && [Quality] == set # [43] == 50
+//艾尔多的冷酷凝视
+//[Name] == Battle Boots && [Quality] == set # [39] == 50
+//艾尔多的成长
+//[Name] == Shadow Plate && [Quality] == set # [41] == 50
+//艾尔多的欺瞒
+//[Name] == Jagged Star && [Quality] == set # [Sockets] == 3
+//艾尔多的律动
+
+// #####  布尔凯索的孩子-野蛮人专属套装  Bul-Kathos' Children-Barbarian Set  ##########
+//[Name] == Colossus Blade && [Quality] == set # [IAS] == 20
+//布尔凯索的神圣代价
+//[Name] == Mythical Sword && [Quality] == set # [IAS] == 20
+//布尔凯索的部族守护
+
+// #####  牛魔王之皮甲  Cow King's Leathers  ###########
+//[Name] == War Hat && [Quality] == set # [31] == 75
+//牛魔王之角
+//[Name] == Studded Leather && [Quality] == set # [MaxHP] == 30
+//牛魔王之皮
+//[Name] == Heavy Boots && [Quality] == set # [Dexterity] == 20 && [80] == 25
+//牛魔王之蹄
+
+// #####  门徒  The Disciple  ##################
+//[Type] == amulet && [Quality] == set # [ItemAllSkills] == 1 && [45] == 50 && [78] ==10
+//述说之珠
+//[Name] == Bramble Mitts && [Quality] == set # [31] == 25 && [IAS] == 20
+//手掌的安置
+//[Name] == Dusk Shroud && [Quality] == set # [31] == 415
+//黑暗信徒
+//[Name] == Demonhide Boots && [Quality] == set # [FRW] == 30 && [11] == 25
+//仪式的走道
+//[Name] == Mithril Coil && [Quality] == set # [31] == 50
+//信条
+
+// #####  格瑞斯华尔德的传奇-圣骑士专属套装  Griswold's Legacy-Paladin Set  #############
+//[Name] == Ornate Plate && [Quality] == set # [31] == 500
+//格瑞斯华尔德之心
+//[Name] == Corona && [Quality] == set # [EnhancedDefense] == 75 && [80] == 30
+//格瑞斯华尔德的勇气
+[Name] == Caduceus && [Quality] == set # [EnhancedDamage] == 240 && [Sockets] == 4
+//格瑞斯华尔德的救赎
+[Name] == Vortex Shield && [Quality] == set # [31] == 108
+//格瑞斯华尔德的荣耀
+
+// #####  天堂的信徒  Heaven's Brethren  #############
+//[Name] == Cuirass && [Quality] == set # [31] == 500
+//黑摩苏的坚决
+//[Name] == Reinforced Mace && [Quality] == set # [IAS] == 40
+//丹弓的教导
+//[Name] == Ward && [Quality] == set # [31] == 50
+//泰比克的光荣
+//[Name] == Spired Helm && [Quality] == set # [31] == 50
+//安戴尔的全灵
+
+// #####  华宁的威严  Hwanin's Majesty  ##############
+//[Name] == Grand Crown && [Quality] == set # [EnhancedDefense] == 100
+//华宁的光辉
+//[Name] == Bill && [Quality] == set # [EnhancedDamage] == 200
+//华宁的正义
+//[Name] == Tigulated Mail && [Quality] == set # [31] == 200
+//华宁的保护
+//[Name] == Belt && [Quality] == set # [LightMinDam] == 3 && [LightMaxDam] == 33
+//华宁的祝福
+
+// #####  不朽之王-野蛮人专属套装  Immortal King-Barbarian Set  #################
+//[Name] == Avenger Guard && [Quality] == set # [80] == 40
+//不朽之王的意志
+//[Name] == Ogre Maul && [Quality] == set # [136] == 40
+//不朽之王的碎魂者
+//[Name] == Sacred Armor && [Quality] == set # [31] == 400
+//不朽之王的灵魂牢笼
+//[Name] == War Belt && [Quality] == set # [31] == 36
+//不朽之王的琐事
+//[Name] == War Gauntlets && [Quality] == set # [31] == 65
+//不朽之王的融炉
+//[Name] == War Boots && [Quality] == set # [31] == 75
+//不朽之王之柱
+
+// #####  马维娜之战斗诗歌-亚马逊女战士专属套装  M'avina's Battle Hymn-Amazon Set  #########
+//[Name] == Diadem && [Quality] == set # [31] == 150
+//马维娜的真实之眼
+//[Name] == Grand Matron Bow && [Quality] == set # [IAS] == 40
+//马维娜的施展
+//[Name] == Kraken Shell && [Quality] == set # [35] == 12
+//马维娜的拥抱
+//[Name] == Battle Gauntlets && [Quality] == set # [31] == 50
+//马维娜的冰握
+//[Name] == Sharkskin Belt && [Quality] == set # [31] == 50
+//马维娜的教义
+
+// #####  娜塔亚的非难-刺客专属套装  Natalya's Odium-Assassin Set  ###############
+//[Name] == Grim Helm && [Quality] == set # [31] == 300 && [39] == 20 && [Strength] == 20 && [Dexterity] == 30
+//娜塔亚的图腾
+//[Name] == Scissors Suwayyah && [Quality] == set # [IAS] == 40
+//娜塔亚的记号
+//[Name] == Loricated Mail && [Quality] == set # [31] == 721 && [Sockets] == 3
+//娜塔亚的影子
+//[Name] == Mesh Boots && [Quality] == set # [31] == 169 && [41]+[43] == 50
+//娜塔亚的灵魂
+
+// #####  娜吉的古代遗迹-女法师专属套装  Naj's Ancient Vestige-Sorceress Set  #########
+//[Name] == Circlet && [Quality] == set # [31] == 105
+//娜吉的小环
+//[Name] == Hellforge Plate && [Quality] == set # [31] == 830
+//娜吉的轻铠甲
+//[Name] == Elder Staff && [Quality] == set # [EnhancedDamage] == 150
+//娜吉解谜杖
+
+// #####  孤儿的呼唤  Orphan's Call  #################
+//[Name] == Winged Helm && [Quality] == set # [Strength] == 15
+//吉永的脸
+//[Name] == Round Shield && [Quality] == set # [EnhancedDefense] == 175
+//惠斯坦的武装
+//[Name] == Sharkskin Gloves && [Quality] == set # [EnhancedDefense] == 50
+//马格纳斯之皮
+//[Name] == Battle Belt && [Quality] == set # [EnhancedDefense] == 75
+//威廉的自尊
+
+// #####  山德的愚行  Sander's Folly  ################
+//[Name] == Cap && [Quality] == set # [80] == 35
+//山德的模范
+//[Name] == Bone Wand && [Quality] == set # [FCR] == 20
+//山德的迷信
+//[Name] == Heavy Gloves && [Quality] == set # [MaxHP] == 40
+//山德的禁忌
+//[Name] == Heavy Boots && [Quality] == set # [Dexterity] == 10 && [Strength] == 5
+//山德的碎石
+
+// #####  沙撒璧的雄伟贡品  Sazabi's Grand Tribute  ########
+//[Name] == Basinet && [Quality] == set # [39]+[41] == 40
+//沙撒璧的精神之鞘
+//[Name] == Cryptic Sword && [Quality] == set # [IAS] == 40
+//沙撒璧的忏悔之钴
+//[Name] == Balrog Skin && [Quality] == set # [MaxHP] == 75
+//沙撒璧的鬼魂释放者
+
+// #####  塔.拉夏的外袍-女法师专属套装  Tal Rasha's Wrappings-Sorceress Set  #########
+[Name] == Swirling Crystal && [Quality] == set # [skillfiremastery] == 2 && [skilllightningmastery] == 2 && [skillcoldmastery] == 2
+//塔.拉夏的判决
+[Name] == Death Mask && [Quality] == set # [31] == 131
+//塔.拉夏的赫拉迪克纹章
+[Name] == Lacquered Plate && [Quality] == set # [31] == 941
+//塔.拉夏的守护
+//[Name] == Mesh Belt && [Quality] == set # [80] == 15
+//塔.拉夏的纤细衣服
+[Type] == amulet && [Quality] == set # [SorceressSkills] == 2
+//塔.拉夏的判决
+
+// #####  塔格奥的化身-死灵法师专属套装  Trang-Oul's Avatar-Necromancer Set  ############
+//[Name] == Bone Visage && [Quality] == set # [31] == 257
+//塔格奥之外装
+//[Name] == Chaos Armor && [Quality] == set # [EnhancedDefense] == 150
+//塔格奥之鳞
+//[Name] == Cantor Trophy && [Quality] == set # [39] == 45
+//塔格奥之翼
+//[Name] == Troll Belt && [Quality] == set # [31] == 166
+//塔格奥之束带
+//[Name] == Heavy Bracers && [Quality] == set # [FCR] == 20
+//塔格奥之手
+
+//***** 护符 部份 ***** [c01]
+
+//***** 超大型 护身符 *****
+
+//*****超大型护身符 技能板*****
+[Name] == Grand charm && [Quality] == Magic # [ItemAddSkillTab] >= 1
+//+1技(全职业纯技能板)
+[Name] == Grand charm && [Quality] == Magic # [itemaddbowandcrossbowskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1亚马弓技 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddpassiveandMagicskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1亚马被动 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddjavelinandspearskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1亚马标技 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddfireskilltab] == 1
+//+1法师火焰技能
+[Name] == Grand charm && [Quality] == Magic # [itemaddlightningskilltab] == 1
+//+1法师雷电技能
+[Name] == Grand charm && [Quality] == Magic # [itemaddcoldskilltab] == 1
+//+1法师冰冻技能
+[Name] == Grand charm && [Quality] == Magic # [itemaddpoisonandboneskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1死灵毒技 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddnecromancersummoningskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1死灵召唤 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddpalicombatskilltab] == 1
+//+1圣骑作战技能
+[Name] == Grand charm && [Quality] == Magic # [itemaddoffensiveaurasskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1圣骑攻击灵气 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemadddefensiveaurasskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1圣骑防御灵气 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddbarbcombatskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1野蛮战斗专家 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddmasteriesskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1野蛮战斗技能 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddwarcriesskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1野蛮呐喊 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemadddruidsummoningskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1德鲁伊召唤 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddshapeshiftingskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1德鲁伊变形 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddelementalskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1德鲁伊元素 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddtrapsskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1刺客陷阱 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddshadowdisciplinesskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1刺客影子训练 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+[Name] == Grand charm && [Quality] == Magic # [itemaddmartialartsskilltab] == 1 && ([FHR] >= 7 || [MaxHP] >= 20 || [FRW] >= 5 || [Dexterity] == 6 || [Strength] == 6)
+//+1刺客武学艺术 且 +7%快速再度攻击 或 20命以上 或 5%高跑 或 +6敏 或 +6力
+
+//*****超大型 抗板 GCS*****
+[Name] == Grand charm && [Quality] == Magic # [39] == 15 && [41] == 15 && [43] == 15 && [45] == 15
+//15全抗
+[Name] == Grand charm && [Quality] == Magic # [39] >= 12 && [41] >= 12 && [43] >= 12 && [45] >= 12 && [FRW] == 7
+//12以上全抗，7%高跑
+[Name] == Grand charm && [Quality] == Magic # [39] >= 12 && [41] >= 12 && [43] >= 12 && [45] >= 12 && [FHR] == 12
+//12全抗，12%快速再度攻击
+[Name] == Grand charm && [Quality] == Magic # [39] >= 12 && [41] >= 12 && [43] >= 12 && [45] >= 12 && [MaxHP] >= 30
+//12全抗，30命以上
+[Name] == Grand charm && [Quality] == Magic # [39] >= 14 && [41] >= 14 && [43] >= 14 && [45] >= 14 && [FRW] == 7
+//14以上全抗，7%高跑
+[Name] == Grand charm && [Quality] == Magic # [39] >= 14 && [41] >= 14 && [43] >= 14 && [45] >= 14 && [FHR] == 12
+//14全抗，12%快速再度攻击
+[Name] == Grand charm && [Quality] == Magic # [39] >= 14 && [41] >= 14 && [43] >= 14 && [45] >= 14 && [MaxHP] >= 30
+//14全抗，30命以上
+
+//*****超大型 大伤板 GCS*****
+[Name] == Grand charm && [Quality] == Magic # [MaxDamage] >= 9 && [MaxHP] >= 30
+//9大伤，30命以上
+[Name] == Grand charm && [Quality] == Magic # [MaxDamage] >= 9 && [Tohit] >= 50
+//9大伤，50准以上
+[Name] == Grand charm && [Quality] == Magic # [MaxDamage] >= 9 && [Tohit] >= 50 && [MaxHP] >= 20
+//9大伤，50准以上，20命以上
+[Name] == Grand charm && [Quality] == Magic # [MaxDamage] == 10 && [MaxHP] >= 25
+//10大伤，25命以上
+[Name] == Grand charm && [Quality] == Magic # [MaxDamage] >= 9 && [FHR] == 12
+//9大伤，12%快速再度攻击
+[Name] == Grand charm && [Quality] == Magic # [MaxDamage] >= 9 && [FRW] == 7
+//9大伤，7%高跑
+[Name] == Grand charm && [Quality] == Magic # [MaxDamage] >= 9 && [Tohit] >= 20 && [FHR] == 12
+//9大伤，20准以上，12%快速再度攻击
+
+//*****超大型 +命/+法/打钱 GCS*****
+[Name] == Grand charm && [Quality] == Magic # [MaxHP] >= 40 && [Maxmana] >= 35
+//40命以上，35法以上
+[Name] == Grand charm && [Quality] == Magic # [itemgoldbonus] == 40
+//40%打钱板
+
+//*****超大型 巴尔大板*****
+[Name] == Grand Charm && [Quality] == Magic && [Level] == 99
+//巴尔大板，(洗技能板用)
+
+//***** 大型 护身符 *****
+
+//*****大型 抗板 LCS*****
+[Name] == Large Charm && [Quality] == Magic # [39] == 8 && [41] == 8 && [43] == 8 && [45] == 8
+//8全抗
+[Name] == Large Charm && [Quality] == Magic # [39] >= 5 && [41] >= 5 && [43] >= 5 && [45] >= 5 && [MaxHP] >= 25
+//5全抗，25命以上
+[Name] == Large Charm && [Quality] == Magic # [39] >= 7 && [41] >= 7 && [43] >= 7 && [45] >= 7 && [MaxHP] >= 25
+//7全抗，25命以上
+[Name] == Large Charm && [Quality] == Magic # [39] == 8 && [41] == 8 && [43] == 8 && [45] == 8 && [MaxHP] >= 25
+//8全抗，25命以上
+[Name] == Large Charm && [Quality] == Magic # [39] == 8 && [41] == 8 && [43] == 8 && [45] >= 8 && [FHR] == 8
+//8全抗，8%快速再度攻击
+
+//*****大型 中伤板 LCS*****
+[Name] == Large Charm && [Quality] == Magic # [MaxDamage] >= 5 && [MaxHP] >= 30
+//5大伤，30命以上
+[Name] == Large Charm && [Quality] == Magic # [MaxDamage] == 6 && [MaxHP] >= 25
+//6大伤，25命以上
+[Name] == Large Charm && [Quality] == Magic # [MaxDamage] >= 5 && [FHR] == 8
+//5大伤，8%快速再度攻击
+[Name] == Large Charm && [Quality] == Magic # [MaxDamage] == 6 && [FHR] == 8
+//6大伤，8%快速再度攻击
+[Name] == Large Charm && [Quality] == Magic # [MaxDamage] >= 5 && [Tohit] >= 25 && [MaxHP] >= 20
+//5大伤，25准以上，20命以上
+[Name] == Large Charm && [Quality] == Magic # [MaxDamage] >= 5 && [Tohit] >= 25 && [FHR] == 8
+//5大伤，25准以上，8%快速再度攻击
+[Name] == Large Charm && [Quality] == Magic # [MaxDamage] >= 5 && [Tohit] >= 25 && [FRW] == 5
+//5大伤，25准以上，5%高跑
+
+//***** 小 护身符 *****
+
+//*****小符  SCS*****
+[Name] == Small charm && [Quality] == Magic # [MaxHP] == 20
+//20命符
+[Name] == Small charm && [Quality] == Magic # [80] == 7
+//7%打宝
+[Name] == Small charm && [Quality] == Magic # [MaxHP] >= 15 && [FRW] == 3
+//15命以上，3%高跑
+[Name] == Small charm && [Quality] == Magic # [MaxHP] >= 15 && [FHR] == 5
+//15命以上，5%快速再度攻击
+[Name] == Small charm && [Quality] == Magic # [MaxHP] >= 17 && [FRW] == 3
+//17命以上，3%高跑
+[Name] == Small charm && [Quality] == Magic # [MaxHP] >= 17 && [FHR] == 5
+//17命以上，5%快速再度攻击
+[Name] == Small charm && [Quality] == Magic # [MaxHP] >= 14 && [9] >= 12
+//14命以上，12法以上
+[Name] == Small charm && [Quality] == Magic # [itemgoldbonus] == 10
+//10%打钱小符
+
+//*****全抗小符 SCS*****
+[Name] == Small charm && [Quality] == Magic # [39] == 5 && [41] == 5 && [43] == 5 && [45] == 5
+//5全抗
+[Name] == Small charm && [Quality] == Magic # [39] >= 3 && [41] >= 3 && [43] >= 3 && [45] >= 3 && [MaxHP] >= 10
+//3全抗，10命以上
+[Name] == Small charm && [Quality] == Magic # [39] >= 3 && [41] >= 3 && [43] >= 3 && [45] >= 3 && [FRW] == 3
+//3全抗，3%高跑
+[Name] == Small charm && [Quality] == Magic # [39] >= 3 && [41] >= 3 && [43] >= 3 && [45] >= 3 && [FHR] == 5
+//3全抗，5%快速再度攻击
+[Name] == Small charm && [Quality] == Magic # [39] >= 3 && [41] >= 3 && [43] >= 3 && [45] >= 3 && [80] >= 5
+//3全抗，5%打宝以上
+[Name] == Small charm && [Quality] == Magic # [39] >= 3 && [41] >= 3 && [43] >= 3 && [45] >= 3 && [Strength] == 2
+//3全抗，2力
+
+//*****单抗小符 SCS*****
+[Name] == Small charm && [Quality] == Magic # ([39] >= 11 || [41] >= 11 || [43] >= 11 || [45] >= 11)
+//11%1单抗
+[Name] == Small charm && [Quality] == Magic # ([39] >= 11 || [41] >= 11 || [43] >= 11 || [45] >= 11) && [FRW] == 3 
+//11%单抗，3%高跑
+[Name] == Small charm && [Quality] == Magic # ([39] >= 11 || [41] >= 11 || [43] >= 11 || [45] >= 11) && [FHR] == 5 
+//11%单抗，5%快速再度攻击
+
+//*****大伤小符 SCS*****
+[Name] == Small charm && [Quality] == Magic # [22] == 3 && [Tohit] == 20
+//3大伤，20准
+[Name] == Small charm && [Quality] == Magic # [22] >= 3 && [Tohit] >= 10 && [FHR] == 5
+//3大伤，10准以上，5%快速再度攻击
+[Name] == Small charm && [Quality] == Magic # [22] >= 3 && [Tohit] >= 10 && [MaxHP] >= 10
+//3大伤，10准以上，10命以上
+[Name] == Small charm && [Quality] == Magic # [22] >= 3 && [Tohit] >= 10 && [FRW] == 3
+//3大伤，10准以上，3%高跑
+
+//*****毒符 SCS*****
+[Name] == Small charm && [Quality] == Magic # [57]/10.2 >= 15
+//100毒以上
+
+//*****小符 巴尔小符*****
+[Name] == Small charm && [Quality] == Magic && [Level] == 99
+//巴尔小符
+
+//****** 珠宝 部份 ****** [j01]
+
+//*****蓝色 珠宝*****
+[Name] == jewel && [Quality] == Magic # [EnhancedDamage] == 40
+//+40%ed
+//[Name] == jewel && [Quality] == Magic # [MaxDamage] >= 28
+//+28大伤以上
+//[Name] == jewel && [Quality] == Magic # [MinDamage] >= 18
+//+18小伤以上
+//[Name] == jewel && [Quality] == Magic # [MaxDamage] == 20
+//+20大伤
+[Name] == jewel && [Quality] == Magic # [IAS] >= 15
+//+15%IAS
+[Name] == jewel && [Quality] == Magic # [39] == 15 && [41] == 15 && [43] == 15 && [45] == 15
+//+15全抗
+[Name] == jewel && [Quality] == Magic # [39] == 30
+//+30%火抗
+[Name] == jewel && [Quality] == Magic # [39] == 30 && [IAS] >= 15
+//+30%火抗，15%IAS
+//[Name] == jewel && [Quality] == Magic # [41] == 30
+//+30%电抗
+//[Name] == jewel && [Quality] == Magic # [43] == 30
+//+30%冰抗
+//[Name] == jewel && [Quality] == Magic # [45] == 30
+//+30%毒抗
+[Name] == jewel && [Quality] == Magic # [EnhancedDamage] >= 38 && ([Strength] >= 8 || [Dexterity] >= 8)
+//+38%ed以上，+8力以上 或 +8敏以上
+[Name] == jewel && [Quality] == Magic # [EnhancedDamage] >= 35 && ([MaxDamage] >= 12 || [MinDamage] >= 8 || [FHR] == 7)
+//+35%ed以上，+12大伤以上 或 +8小伤以上 或 +7%快速再度攻击
+[Name] == jewel && [Quality] == Magic # [EnhancedDamage] >= 39 && [91] == -15
+//-15%需求，+39%ed以上
+[Name] == jewel && [Quality] == Magic # [EnhancedDamage] >= 30 && [IAS] >= 15
+//+15%IAS，+30%ed以上
+[Name] == jewel && [Quality] == Magic # [IAS] >= 15 && ([MaxDamage] >= 15 || [MinDamage] >= 10)
+//+15%IAS，+15大伤以上 或 +10小伤以上
+[Name] == jewel && [Quality] == Magic # [91] == -15 && ([MaxDamage] >= 15 || [MinDamage] >= 10 || [Strength] >= 9 || [Dexterity] >= 9 || [FHR] == 7)
+//-15%需求，+15大伤以上 或 +10小伤以上 或 +9力以上 或 +9敏以上 或 +7%快速再度攻击
+[Name] == jewel && [Quality] == Magic # [MaxHP] >= 20 && [FHR] == 7
+//+20命以上，+7%快速再度攻击
+[Name] == jewel && [Quality] == Magic # [39] == 15 && [41] == 15 && [43] == 15 && [45] == 15 && [FHR] == 7
+//+15全抗，+7%快速再度攻击
+[Type] == Jewel && [Quality] == Magic # [MaxHP] == 20 && [39] == 15 && [41] == 15 && [43] == 15 && [45] == 15
+//+20命以上，+15全抗
+
+//*****黄色 珠宝*****
+[Name] == jewel && [Quality] == Rare # [39] >= 27 && [Strength] >= 7 && [Dexterity] >= 7 && [FHR] >=7
+//+27%火抗以上，+7力以上，+7敏以上，+7%快速再度攻击以上
+//[Name] == jewel && [Quality] == Rare # [39] >= 8 && [41] >= 25 && [43] >=8 && [45] >= 8 && [FHR] >=7
+//+8%火冰毒抗以上，+25%电抗以上，+7%快速再度攻击以上
+//[Name] == jewel && [Quality] == Rare # [39] >= 25 && [41] >= 8 && [43] >=8 && [45] >= 8 && [FHR] >=7
+//+8%电冰毒抗以上，+25%火抗以上，+7%快速再度攻击以上
+//[Name] == jewel && [Quality] == Rare # [39] >= 8 && [41] >= 8 && [43] >=25 && [45] >= 8 && [FHR] >=7
+//+8%火电毒抗以上，+25%冰抗以上，+7%快速再度攻击以上
+//[Name] == jewel && [Quality] == Rare # [39] >= 8 && [41] >= 8 && [43] >=8 && [45] >= 25 && [FHR] >=7
+//+8%火电冰抗以上，+25%毒抗以上，+7%快速再度攻击以上
+//[Name] == jewel && [Quality] == Rare # [39] >= 8 && [41] >= 8 && [43] >= 8 && [45] >= 8 && [FHR] >= 7
+//+8全抗以上，+7%快速再度攻击以上
+//[Name] == jewel && [Quality] == Rare # [39] >= 8 && [41] >= 8 && [43] >= 8 && [45] >= 8 && ([Strength] >= 8 || [Dexterity] >= 8)
+//+8全抗以上，+8力以上 或 +8敏以上
+//[Name] == jewel && [Quality] == Rare # ([MaxDamage] >= 25 || [MinDamage] >= 16)
+//+25大伤以上 或 +16小伤以上
+[Name] == jewel && [Quality] == Rare # [EnhancedDamage] >= 25 && ([Strength] >= 8 || [Dexterity] >= 8)
+//+25%ed以上，+8力以上 或 +8敏以上
+[Name] == jewel && [Quality] == Rare # [EnhancedDamage] >= 28 && [FHR] == 7
+//+28%ed以上，+7%快速再度攻击
+[Name] == jewel && [Quality] == Rare # [EnhancedDamage] >= 29 && [91] == -15
+//-15%需求，+29%ed以上
+//[Name] == jewel && [Quality] == Rare # [91] == -15 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10
+//-15%需求，+10全抗以上
+//[Name] == jewel && [Quality] == Rare # [91] == -15 && ([MaxDamage] >= 10 || [MinDamage] >= 9 || [Strength] >= 8 || [Dexterity] >= 8 || [FHR] == 7)
+//-15%需求，+10大伤以上 或 +9小伤以上 或 +8力以上 或 +8敏以上 或 +7%快速再度攻击
+[Name] == jewel && [Quality] == Rare # [91] == -15 && [Strength] >= 5 && [Dexterity] >= 5
+//-15%需求，+5力以上，+5敏以上
+//[Name] == jewel && [Quality] == Rare # [91] == -15 && [39] >= 10 && ([Strength] >= 5 || [Dexterity] >= 5)
+//-15%需求，+10%火抗以上，+5力以上 或 +5敏以上
+//[Name] == jewel && [Quality] == Rare # [91] == -15 && [Dexterity] >= 5 && [19] >= 50
+//-15%需求，+5敏以上，+50准以上
+[Name] == jewel && [Quality] == Rare # [EnhancedDamage] >= 25 && [19] >= 50 && ([Strength] >= 5 || [Dexterity] >= 5)
+//+25%ed以上，+50准以上，+5力以上 或 +5敏以上
+[Name] == jewel && [Quality] == Rare # [MaxHP] >= 20 && [FHR] == 7
+//+20命以上，+7%快速再度攻击
+[Name] == jewel && [Quality] == Rare # [39] >= 15 && [41] >= 15 && [43] >= 15 && [45] >= 15 && [FHR] == 7
+//+15全抗以上，+7%快速再度攻击
+
+
+//******* 稀有装备 部份 ******* [r01]
+
+//*****黄色 戒指*****
+[Type] == Ring && [Quality] == Rare # [80] >= 30
+//+30%以上打宝
+[Type] == Ring && [Quality] == Rare # [LifeLeech] >= 5 && [ManaLeech] >= 5
+//5%以上双吸
+[Type] == Ring && [Quality] == Rare # [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 10 || [Dexterity] >= 10)
+//+10%高施，+30命以上，+10力以上 或 +10敏以上
+[Type] == Ring && [Quality] == Rare # [FCR] == 10 && [MaxHP] >= 20 && [39] >= 15 && [43] >= 15 && ([Strength] >= 10 || [Dexterity] >= 10)
+//+10%高施，+20命以上，+15%火冰抗以上，+10力以上 或 +10敏以上
+[Type] == Ring && [Quality] == Rare # [FCR] == 10 && [MaxHP] >= 20 && [43] >= 15 && [41] >= 15 && ([Strength] >= 10 || [Dexterity] >= 10)
+//+10%高施，+20命以上，+15%冰电抗以上，+10力以上 或 +10敏以上
+[Type] == Ring && [Quality] == Rare # [FCR] == 10 && [MaxHP] >= 20 && [41] >= 15 && [39] >= 15 && ([Strength] >= 10 || [Dexterity] >= 10)
+//+10%高施，+20命以上，+15%火电抗以上，+10力以上 或 +10敏以上
+[Type] == Ring && [Quality] == Rare # [FCR] == 10 && [MaxHP] >= 20 && ([Strength] >= 15 || [Dexterity] >= 10)
+//+10%高施，+20命以上，+15力以上 或 +10敏以上
+[Type] == Ring && [Quality] == Rare # [MaxHP] >= 15 && [Strength] >= 10 && [Dexterity] >= 15
+//+15命以上，+10力以上，+15敏以上
+[Type] == Ring && [Quality] == Rare # [Strength] >= 15 && [Dexterity] >= 15
+//+15力敏以上
+[Type] == Ring && [Quality] == Rare # [MaxHP] >= 30 && [Dexterity] >= 15
+//+30命以上，+15敏以上
+[Type] == Ring && [Quality] == Rare # [LifeLeech] >= 6 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+6%吸命以上，+15力以上 或 +15敏以上
+
+//***** 黄色 项链 *****
+
+//*****50%打宝 项链*****
+[Type] == Amulet && [Quality] == Rare # [80] == 50
+
+//*****+2 职业技能 项链*****
+[Type] == Amulet && [Quality] == Rare # [Assassin skills] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2刺客技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [Assassin skills] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2刺客技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [Assassin skills] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2刺客技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [Assassin skills] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2刺客技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [sorceress skills] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2法师技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [sorceress skills] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [sorceress skills] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [sorceress skills] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [druid skills] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2德鲁伊技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [druid skills] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2德鲁伊技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [druid skills] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2德鲁伊技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [druid skills] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2德鲁伊技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [necromancer skills] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2死灵技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [necromancer skills] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2死灵技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [necromancer skills] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2死灵技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [necromancer skills] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2死灵技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [Paladin skills] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2圣骑技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [Paladin skills] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2圣骑技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [Paladin skills] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2圣骑技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [Paladin skills] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2圣骑技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [Amazon skills] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2亚马技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [Amazon skills] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2亚马技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [Amazon skills] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2亚马技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [Amazon skills] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2亚马技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [barbarian skills] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2野蛮技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [barbarian skills] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2野蛮技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [barbarian skills] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2野蛮技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [barbarian skills] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2野蛮技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+
+//*****+2 单系技能 项链*****
+[Type] == Amulet && [Quality] == Rare # [palicombatskilltab] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2圣骑作战技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [palicombatskilltab] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2圣骑作战技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [palicombatskilltab] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2圣骑作战技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [palicombatskilltab] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2圣骑作战技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [trapsskilltab] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2刺客陷阱技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [trapsskilltab] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2刺客陷阱技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [trapsskilltab] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2刺客陷阱技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [trapsskilltab] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2刺客陷阱技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [fireskilltab] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2法师火焰技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [fireskilltab] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师火焰技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [fireskilltab] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师火焰技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [fireskilltab] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师火焰技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [coldskilltab] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2法师冰冻技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [coldskilltab] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师冰冻技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [coldskilltab] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师冰冻技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [coldskilltab] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师冰冻技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [lightningskilltab] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2法师雷电技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [lightningskilltab] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师雷电技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [lightningskilltab] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师雷电技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [lightningskilltab] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2法师雷电技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [poisonandboneskilltab] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2死灵毒素和白骨技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [poisonandboneskilltab] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2死灵毒素和白骨技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [poisonandboneskilltab] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2死灵毒素和白骨技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [poisonandboneskilltab] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2死灵毒素和白骨技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [elementalskilltab] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2德鲁伊元素技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [elementalskilltab] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2德鲁伊元素技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [elementalskilltab] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2德鲁伊元素技能能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [elementalskilltab] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2德鲁伊元素技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [warcriesskilltab] == 2 && [FCR] == 10 && [Strength] >= 15 && [Dexterity] >= 10
+//+2野蛮呐喊技能，+10%高施，+15力以上，+10敏以上
+[Type] == Amulet && [Quality] == Rare # [warcriesskilltab] == 2 && [FCR] == 10 && [MaxHP] >= 30 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2野蛮呐喊技能，+10%高施，+30命以上，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [warcriesskilltab] == 2 && [FCR] == 10 && [39] >= 10 && [41] >= 10 && [43] >= 10 && [45] >= 10 && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2野蛮呐喊技能，+10%高施，+10全抗，+15力以上 或 +15敏以上
+[Type] == Amulet && [Quality] == Rare # [warcriesskilltab] == 2 && [FCR] == 10 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50) && ([Strength] >= 15 || [Dexterity] >= 15)
+//+2野蛮呐喊技能，+10%高施，+双抗50%以上，+15力以上 或 +15敏以上
+
+
+//***** 蓝色/黄色 德鲁伊 技能 PELTS 部份 *****
+
+//*****召唤灰熊 PELT*****
+//[Name] == Wolf Head && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Hawk Helm && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Antlers && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Falcon Mask && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Spirit Mask && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Alpha Helm && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Griffon Headdress && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Hunter's Guise && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Sacred Feathers && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Totemic Mask && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Blood Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Sun Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Earth Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Sky Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+//[Name] == Dream Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillSummonGrizzly] == 3 && [druid skills] == 2
+
+//*****龙卷风 PELT*****
+[Name] == Wolf Head && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Hawk Helm && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Antlers && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Falcon Mask && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Spirit Mask && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Alpha Helm && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Griffon Headdress && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Hunter's Guise && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Sacred Feathers && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Totemic Mask && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Blood Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Sun Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Earth Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Sky Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Dream Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [druid skills] == 2
+[Name] == Blood Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [elementalskilltab] == 3
+[Name] == Sun Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [elementalskilltab] == 3
+[Name] == Earth Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [elementalskilltab] == 3
+[Name] == Sky Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [elementalskilltab] == 3
+[Name] == Dream Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillTornado] == 3 && [elementalskilltab] == 3
+
+//*****焰爪 PELT*****
+[Name] == Wolf Head && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Hawk Helm && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Antlers && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Falcon Mask && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Spirit Mask && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Alpha Helm && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Griffon Headdress && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Hunter's Guise && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Sacred Feathers && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Totemic Mask && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Blood Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Sun Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Earth Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Sky Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+[Name] == Dream Spirit && ([Quality] == Rare || [Quality] == Magic) # [skillFireclaws] == 3 && [druid skills] == 2
+
+//***** 黄色 头饰 部份 *****
+
+//*****+2 职业技能/20%高施/20/30高跑 头饰*****
+[Type] == Circlet && [Quality] == Rare # [FCR] == 20 && ([Assassin skills] == 2 || [druid skills] == 2 || [sorceress skills] == 2 || [necromancer skills] == 2 || [Paladin skills] == 2)
+//+2刺客/德鲁伊/法师/死灵/圣骑技能，+20%高施
+[Type] == Circlet && [Quality] == Rare # [FCR] == 20 && [Sockets] == 2 && ([Assassin skills] == 2 || [druid skills] == 2 || [sorceress skills] == 2 || [necromancer skills] == 2 || [Paladin skills] == 2)
+//+2刺客/德鲁伊/法师/死灵/圣骑技能，+20%高施，+2洞
+[Type] == Circlet && [Quality] == Rare # [FCR] == 20 && ([Strength] >= 15 || [Dexterity] >= 15) && [MaxHP] >= 10 && ([Assassin skills] == 2 || [druid skills] == 2 || [sorceress skills] == 2 || [necromancer skills] == 2 || [Paladin skills] == 2)
+//+2刺客/德鲁伊/法师/死灵/圣骑技能，+20%高施，+15力/敏以上，+10命以上
+[Type] == Circlet && [Quality] == Rare # [Amazon skills] == 2 && [FRW] == 20 && ([Strength] >= 15 || [Dexterity] >= 15) && [MaxHP] >= 10
+//+2亚马技能，+20高跑，+15力/敏以上，+10命以上
+[Type] == Circlet && [Quality] == Rare # [Amazon skills] == 2 && [FRW] >= 20
+//+2亚马技能，+20高跑以上
+[Type] == Circlet && [Quality] == Rare # [Amazon skills] == 2 && [FRW] >= 20 && [Sockets] == 2
+//+2亚马技能，+20高跑以上，+2洞
+
+//*****+2 单系技能/20%高施 头饰*****
+[Type] == Circlet && [Quality] == Rare # [FCR] == 20 && ([fireskilltab] == 2 || [coldskilltab] == 2 || [lightningskilltab] == 2 || [poisonandBoneskilltab] == 2 || [elementalskilltab] == 2 || [palicombatskilltab] == 2 || [trapsskilltab] == 2)
+//+2法师火焰/冰冻/雷电/死灵毒素和白骨/德鲁伊元素/圣骑作战/刺客陷阱技能，+20高施
+[Type] == Circlet && [Quality] == Rare # [FCR] == 20 && [Sockets] == 2 && ([fireskilltab] == 2 || [coldskilltab] == 2 || [lightningskilltab] == 2 || [poisonandBoneskilltab] == 2 || [elementalskilltab] == 2 || [palicombatskilltab] == 2 || [trapsskilltab] == 2)
+//+2法师火焰/冰冻/雷电/死灵毒素和白骨/德鲁伊元素/圣骑作战/刺客陷阱技能，+20高施，+2洞
+[Type] == Circlet && [Quality] == Rare # [FCR] == 20 && ([Strength] >= 15 || [Dexterity] >= 15) && [MaxHP] >= 10 && [lightningskilltab] == 2
+//+2法师火焰/冰冻/雷电/死灵毒素和白骨/德鲁伊元素/圣骑作战/刺客陷阱技能，+20高施，+15力/敏以上，+10命以上
+
+//*****幻影 头饰*****
+[Type] == Circlet && [Quality] == Rare # [FHR] >= 10 && [MaxHP] >= 20 && [225] > 1 && ([Strength] >= 10 || [Dexterity] >= 10 || [39]+[41]+[43]+[45] >= 80) && [Sockets] == 2
+//+10%快速再度攻击以上、+20命以上、+依等级提高额外的命中率、+10力以上/+10敏以上、2洞
+[Type] == Circlet && [Quality] == Rare # [FHR] >= 10 && [MaxHP] >= 20 && [225] > 1 && [39]+[41]+[43]+[45] >= 80 && [Sockets] == 2
+//+10%快速再度攻击以上、+20命以上、+依等级提高额外的命中率、+20抗以上、2洞
+
+//***** RARE ARMOR 部份 *****
+
+//*****RARE VISIONARY PRIMAL HELM*****
+[Type] == Primal helm && [Quality] == Rare # [FHR] >= 10 && [MaxHP] >= 20 && [225] > 1 && [Sockets] == 2
+//+10%快速再度攻击以上、+20命以上、+依等级提高额外的命中率、2洞
+
+//*****RARE SHIELDS*****
+[Type] == Shield && [Quality] == Rare # [FHR] >= 17 && [toblock] == 20 && [102] == 30 && [Sockets] == 2
+//+17%快速再度攻击、+20%增加格档机率、+30%快速格档机率、2洞
+[Type] == auricshields && [Quality] == Rare # [FHR] >= 17 && [toblock] == 20 && [102] == 30 && [Sockets] == 2
+//+17%快速再度攻击、+20%增加格档机率、+30%快速格档机率、2洞
+
+//*****RARE HELMETS*****
+[Type] == Helm && [Quality] == Rare # [FHR] >= 10 && [MaxHP] >= 20 && [225] > 1 && [Sockets] == 2
+//+10%快速再度攻击以上、+20命以上、+依等级提高额外的命中率、2洞
+[Type] == Circlet && [Quality] == Rare # [MaxHP] >= 30 && [225] > 1 && ([Strength] >= 15 || [Dexterity] >= 15) && [Sockets] == 2
+//+30命以上、+依等级提高额外的命中率、+15力/敏以上、2洞
+[Name] == Diadem && [Quality] == Rare && [Level] == 99
+//巴尔黄权冠
+
+//*****黄色 手套*****
+[Type] == Gloves && [Quality] == Rare && [Flag] != ethereal # [IAS] == 20 && [itemaddjavelinandspearskilltab] >= 2
+//+2标枪技能，+20%IAS
+[Type] == Gloves && [Quality] == Rare && [Flag] != ethereal # [IAS] == 20 && [Strength] >= 10 && [Dexterity] >= 10 && ([39]+[41] >= 40 || [39]+[43] >= 40 || [41]+[43] >= 40)
+//+20%IAS，+10力、敏以上，+双抗40%以上
+[Type] == Gloves && [Quality] == Rare && [Flag] != ethereal # [IAS] == 20 && ([itemaddbowandcrossbowskilltab] == 2 || [itemaddjavelinandspearskilltab] == 2 || [itemaddpassiveandMagicskilltab] == 2) && ([Strength] >= 10 || [Dexterity] >= 10)
+//+2弓/标枪/被动技能，+20%IAS，+10力/敏以上
+
+//*****黄色 鞋子*****
+[Type] == Boots && [Quality] == Rare && [Flag] != ethereal # [FRW] >= 20 && [FHR] >= 20 && ([39]+[41] >= 50 || [39]+[43] >= 50 || [41]+[43] >= 50)
+//+20%高跑以上，+20%快速再度攻击以上，+双抗50%以上
+[Type] == Boots && [Quality] == Rare && [Flag] != ethereal # [FRW] >= 20 && [FHR] >= 10 && ([39]+[41]+[43] >= 80 || [39]+[43]+[45] >= 80 || [39]+[41]+[45] >= 80 || [41]+[43]+[45] >= 80)
+//+20%高跑以上，+10%快速再度攻击以上，+三抗80%以上
+[Type] == Boots && [Quality] == Rare && [Flag] != ethereal # [FRW] >= 20 && [FHR] >= 10 && [Strength] >= 8 && [Dexterity] >= 8
+//+20%高跑以上，+10%快速再度攻击以上，+8力以上，+8敏以上
+
+//*****黄色 腰带*****
+[Type] == Belt && [Quality] == Rare && [Flag] != ethereal # [FHR] == 24 && [Strength] >= 20 && [MaxHP] >= 40
+//+24%快速再度攻击，+20力以上，+40命以上
+[Type] == Belt && [Quality] == Rare && [Flag] != ethereal # [FHR] >= 17 && [Strength] >= 28 && [MaxHP] >= 40
+//+17%快速再度攻击以上，+28力以上，+40命以上
+[Type] == Belt && [Quality] == Rare && [Flag] != ethereal # [FHR] >= 17 && [Strength] >= 22 && [MaxHP] >= 40 && ([39] >= 25 || [41] >= 25 || [43] >= 25)
+//+17%快速再度攻击以上，+22力以上，+40命以上，+25%火/冰/电抗以上
+[Type] == Belt && [Quality] == Rare && [Flag] != ethereal # [FHR] >= 17 && [Strength] >= 22 && [MaxHP] >= 40 && ([39]+[41] >= 30 || [39]+[43] >= 30 || [41]+[43] >= 30)
+//+17%快速再度攻击以上，+22力以上，+40命以上，+双抗30%以上
+
+//***** RARE WEAPONS 部份 *****
+
+//*****FOOLS 1H AXE*****
+[Name] == Tomahawk && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Tomahawk && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Tomahawk && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Tomahawk && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Tomahawk && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Tomahawk && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Small Crescent && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Small Crescent && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Small Crescent && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Small Crescent && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Small Crescent && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Small Crescent && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Ettin Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Ettin Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Ettin Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Ettin Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Ettin Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Ettin Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == War Spike && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == War Spike && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == War Spike && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == War Spike && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == War Spike && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == War Spike && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == berserker axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == berserker axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == berserker axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == berserker axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == berserker axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == berserker axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Hatchet && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Hatchet && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Hatchet && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Hatchet && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Hatchet && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Hatchet && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Cleaver && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Cleaver && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Cleaver && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Cleaver && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Cleaver && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Cleaver && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Twin Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Twin Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Twin Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Twin Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Twin Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Twin Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Crowbill && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Crowbill && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Crowbill && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Crowbill && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Crowbill && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Crowbill && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Naga && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Naga && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Naga && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Naga && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Naga && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Naga && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == hand Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == hand Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == hand Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == hand Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == hand Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == hand Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Double Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Double Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Double Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Double Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Double Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Double Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == Military Pick && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == Military Pick && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == Military Pick && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == Military Pick && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == Military Pick && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == Military Pick && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Name] == War Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Name] == War Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Name] == War Axe && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Name] == War Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Name] == War Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+[Name] == War Axe && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+
+//*****FOOLS 1H/2H SWORD*****
+[Type] == Sword && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [218] >= 1
+[Type] == Sword && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [225] >= 1
+[Type] == Sword && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [224] >= 1
+[Type] == Sword && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 100 && [IAS] >= 20 && [218] >= 1
+[Type] == Sword && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [225] >= 1
+[Type] == Sword && [Quality] == Rare && [Flag] != ethereal # [EnhancedDamage] >= 200 && [IAS] >= 20 && [224] >= 1
+
+//*****无形 350%ED以上 刀剑 20%IAS*****
+[Type] == Sword && [Quality] == Rare && [Flag] == ethereal # [EnhancedDamage] >= 350 && [IAS] >= 20
+
+//*****愚人 爪*****
+[Name] == Runic Talons && [Quality] == Rare # [IAS] >= 20 && [224] >= 1
+[Name] == Feral Claws && [Quality] == Rare # [IAS] >= 20 && [224] >= 1
+[Name] == Runic Talons && [Quality] == Rare # [IAS] >= 20 && [225] >= 1
+[Name] == Feral Claws && [Quality] == Rare # [IAS] >= 20 && [225] >= 1
+[Name] == Wrist Sword && [Quality] == Rare # [IAS] >= 20 && [225] >= 1
+[Name] == Battle Cestus && [Quality] == Rare # [IAS] >= 20 && [224] >= 1
+[Name] == Wrist Sword && [Quality] == Rare # [IAS] >= 20 && [224] >= 1
+[Name] == Battle Cestus && [Quality] == Rare # [IAS] >= 20 && [225] >= 1
+
+//***** +4 标枪技能 30%IAS以上 标枪*****
+[Name] == Maiden Javelin && [Quality] == Rare # [javelinandspearskilltab] >= 2 && [Amazon skills] == 2 && [IAS] >= 30
+[Name] == Maiden Javelin && [Quality] == Rare # [javelinandspearskilltab] >= 4 && [IAS] >= 30
+[Name] == Ceremonial Javelin && [Quality] == Rare # [javelinandspearskilltab] >= 2 && [Amazon skills] == 2 && [IAS] >= 30
+[Name] == Ceremonial Javelin && [Quality] == Rare # [javelinandspearskilltab] >= 4 && [IAS] >= 30
+[Name] == Matriarchal Javelin && [Quality] == Rare # [javelinandspearskilltab] >= 2 && [Amazon skills] == 2 && [IAS] >= 30
+[Name] == Matriarchal Javelin && [Quality] == Rare # [javelinandspearskilltab] >= 4 && [IAS] >= 30
+[Name] == Maiden Javelin && [Quality] == Magic # [javelinandspearskilltab] >= 2 && [Amazon skills] == 2 && [IAS] >= 30
+[Name] == Maiden Javelin && [Quality] == Magic # [javelinandspearskilltab] >= 4 && [IAS] >= 30
+[Name] == Ceremonial Javelin && [Quality] == Magic # [javelinandspearskilltab] >= 2 && [Amazon skills] == 2 && [IAS] >= 30
+[Name] == Ceremonial Javelin && [Quality] == Magic # [javelinandspearskilltab] >= 4 && [IAS] >= 30
+[Name] == Matriarchal Javelin && [Quality] == Magic # [javelinandspearskilltab] >= 2 && [Amazon skills] == 2 && [IAS] >= 30
+[Name] == Matriarchal Javelin && [Quality] == Magic # [javelinandspearskilltab] >= 4 && [IAS] >= 30
+
+//****** 魔法装备 部份 ****** [m01]
+
+//*****蓝色 戒指*****
+[Type] == Ring && [Quality] == Magic # [80] == 40
+//+40%打宝
+[Type] == Ring && [Quality] == Magic # [FCR] == 10 && [MaxMana] == 120
+//+10%高施，+120法
+[Type] == Ring && [Quality] == Magic # [FCR] == 10 && [39] >= 12 && [41] >= 12
+//+10%高施，+12全抗以上
+[Type] == Ring && [Quality] == Magic # [Strength] >= 18 && [39] >= 12 && [41] >= 12
+//+18力以上，+12全抗以上
+
+//*****+2/+3技 蓝链*****
+[Type] == Amulet && [Quality] == Magic # [Assassin skills] == 2 && [MaxHP] >= 90
+//+2刺客技，90命以上
+[Type] == Amulet && [Quality] == Magic # [druid skills] == 2 && [MaxHP] >= 90
+//+2德鲁伊技，90命以上
+[Type] == Amulet && [Quality] == Magic # [necromancer skills] == 2 && [MaxHP] >= 90
+//+2死灵技，90命以上
+//[Type] == Amulet && [Quality] == Magic # [Paladin skills] == 2 && [80] >= 20
+//+2圣骑技，20%打宝
+[Type] == Amulet && [Quality] == Magic # [Paladin skills] == 2 && [MaxHP] >= 90
+//+2圣骑技，90命以上
+[Type] == Amulet && [Quality] == Magic # [palicombatskilltab] == 3 && [FCR] >= 10
+//+3圣骑作战技能，10%高施
+[Type] == Amulet && [Quality] == Magic # [palicombatskilltab] == 3 && [MaxHP] >= 90
+//+3圣骑作战技能，90命以上
+//[Type] == Amulet && [Quality] == Magic # [palicombatskilltab] == 3 && [80] >= 20
+//+3圣骑作战技能，20%打宝
+[Type] == Amulet && [Quality] == Magic # [trapsskilltab] == 3 && [FCR] >= 10
+//+3陷阱技能，10%高施
+[Type] == Amulet && [Quality] == Magic # [trapsskilltab] == 3 && [MaxHP] >= 90
+//+3陷阱技能，90命以上
+[Type] == Amulet && [Quality] == Magic # [fireskilltab] == 3 && [FCR] >= 10
+//+3火焰技能，10%高施
+[Type] == Amulet && [Quality] == Magic # [fireskilltab] == 3 && [MaxHP] >= 90
+//+3火焰技能，90命以上
+[Type] == Amulet && [Quality] == Magic # [coldskilltab] == 3 && [FCR] >= 10
+//+3冰冻技能，10%高施
+[Type] == Amulet && [Quality] == Magic # [coldskilltab] == 3 && [MaxHP] >= 90
+//+3冰冻技能，90命以上
+[Type] == Amulet && [Quality] == Magic # [lightningskilltab] == 3 && [FCR] >= 10
+//+3雷电技能，10%高施
+[Type] == Amulet && [Quality] == Magic # [lightningskilltab] == 3 && [MaxHP] >= 90
+//+3雷电技能，90命以上
+[Type] == Amulet && [Quality] == Magic # [poisonandboneskilltab] == 3 && [FCR] >= 10
+//+3毒系技能，10%高施
+[Type] == Amulet && [Quality] == Magic # [poisonandboneskilltab] == 3 && [MaxHP] >= 90
+//+3毒系技能，90命以上
+[Type] == Amulet && [Quality] == Magic # [elementalskilltab] == 3 && [FCR] >= 10
+//+3元素技能，10%高施
+[Type] == Amulet && [Quality] == Magic # [elementalskilltab] == 3 && [MaxHP] >= 90
+//+3元素技能，90命以上
+[Type] == Amulet && [Quality] == Magic # [warcriesskilltab] == 3 && [FCR] >= 10
+//+3战嚎技能，10%高施
+
+
+//** 蓝色 头饰 **
+
+//*****幻影之 头盔*****
+[Type] == Helm && [Quality] == Magic # [MaxHP] >= 81 && [225] > 1
+//+81命以上
+[Type] == Circlet && [Quality] == Magic # ([MaxHP] >= 81 || [LifeLeech] >= 7 || [ManaLeech] >= 7 || [FRW] >= 20) && [225] > 1
+//+81命以上/+7%吸血以上/+7%吸法以上/+20高跑以上
+
+//*****+2技 头饰*****
+[Type] == Circlet && [Quality] == Magic # [Amazon skills] == 2 && [FRW] == 30
+//+2亚马技能，30%高跑
+[Type] == Circlet && [Quality] == Magic # [FCR] == 20 && ([Assassin skills] == 2 || [sorceress skills] == 2 || [druid skills] == 2 || [necromancer skills] == 2 || [Paladin skills] == 2)
+//+2刺客/法师/德鲁伊/死灵/圣骑技能，20%高施
+
+//*****+3技头饰*****
+//[Type] == Circlet && [Quality] == Magic # [fireskilltab] == 3
+//+3火焰技能
+[Type] == Circlet && [Quality] == Magic # [trapsskilltab] == 3 && [FCR] == 20
+//+3陷阱技能，20%高施
+[Type] == Circlet && [Quality] == Magic # [fireskilltab] == 3 && [FCR] == 20
+//+3火焰技能，20%高施
+[Type] == Circlet && [Quality] == Magic # [fireskilltab] == 3 && [MaxHP] >= 85
+//+3火焰技能，85命以上
+[Type] == Circlet && [Quality] == Magic # [coldskilltab] == 3 && [FCR] == 20
+//+3冰冻技能，20%高施
+[Type] == Circlet && [Quality] == Magic # [coldskilltab] == 3 && [MaxHP] >= 85
+//+3冰冻技能，85命以上
+[Type] == Circlet && [Quality] == Magic # [lightningskilltab] == 3 && [FCR] == 20
+//+3雷电技能，20%高施
+[Type] == Circlet && [Quality] == Magic # [lightningskilltab] == 3 && [MaxHP] >= 85
+//+3雷电技能，85命以上
+[Type] == Circlet && [Quality] == Magic # [elementalskilltab] == 3 && [FCR] == 20
+//+3元素技能，20%高施
+[Type] == Circlet && [Quality] == Magic # [elementalskilltab] == 3 && [MaxHP] >= 85
+//+3元素技能，85命以上
+[Type] == Circlet && [Quality] == Magic # [poisonandboneskilltab] == 3 && [FCR] == 20
+//+3毒系技能，20%高施
+[Type] == Circlet && [Quality] == Magic # [poisonandboneskilltab] == 3 && [MaxHP] >= 85
+//+3毒系技能，85命以上
+[Type] == Circlet && [Quality] == Magic # [palicombatskilltab] == 3 && [FCR] == 20
+//+3圣骑作战技能，20%高施
+[Type] == Circlet && [Quality] == Magic # [palicombatskilltab] == 3 && [MaxHP] >= 85
+//+3圣骑作战技能，85命以上
+
+//*****珠宝匠之头饰*****
+[Type] == Circlet && [Quality] == Magic # [Sockets] == 3 && [FRW] == 30
+//3洞，30%高跑
+[Type] == Circlet && [Quality] == Magic # [Sockets] == 3 && [MaxHP] >= 85
+//3洞，85命以上
+[Type] == Circlet && [Quality] == Magic # [Sockets] == 3 && [Dexterity] >= 20
+//3洞，20敏以上
+
+//*****蓝圣骑士盾*****
+[Type] == auricshields && [Quality] == Magic # [102] == 30 && [Sockets] == 4
+//珠宝匠之偏向 圣骑士盾
+
+//*****蓝统盾*****
+//[Name] == Monarch && [Quality] == Magic # [91] >= 20 && [Sockets] == 4
+//珠宝匠之安逸 统盾
+//[Name] == Monarch && [Quality] == Magic # [99] >= 17 && [Sockets] == 4
+//珠宝匠之均衡 统盾
+[Name] == Monarch && [Quality] == Magic # [102] == 30 && [Sockets] == 4
+//珠宝匠之偏向 统盾
+
+//***** 蓝装 盔甲 *****
+
+//*****4洞珠宝匠之巨鲸 盔甲 95命以上*****
+[Name] == Dusk Shroud && [Quality] == Magic # [Sockets] == 4 && [MaxHP] >= 95
+//灰暮寿衣
+[Name] == Wyrmhide && [Quality] == Magic # [Sockets] == 4 && [MaxHP] >= 95
+//古龙皮
+[Name] == Scarab Husk && [Quality] == Magic # [Sockets] == 4 && [MaxHP] >= 95
+//圣甲虫壳皮甲
+[Name] == Archon Plate && [Quality] == Magic # [Sockets] == 4 && [MaxHP] >= 95
+//执政官铠甲
+[Name] == Wire fleece && [Quality] == Magic # [Sockets] == 4 && [MaxHP] >= 95
+//线羊毛皮甲
+[Name] == Great Hauberk && [Quality] == Magic # [Sockets] == 4 && [MaxHP] >= 95
+//巨型鳞铠胸甲
+
+//*****4洞珠宝匠之稳定 盔甲(24%快速再度攻击)*****
+[Name] == Dusk Shroud && [Quality] == Magic # [99] == 24 && [Sockets] == 4
+//灰暮寿衣
+[Name] == Wyrmhide && [Quality] == Magic # [99] == 24 && [Sockets] == 4
+//古龙皮
+[Name] == Scarab Husk && [Quality] == Magic # [99] == 24 && [Sockets] == 4
+//圣甲虫壳皮甲
+[Name] == Archon Plate && [Quality] == Magic # [99] == 24 && [Sockets] == 4
+//执政官铠甲
+[Name] == Wire fleece && [Quality] == Magic # [99] == 24 && [Sockets] == 4
+//线羊毛皮甲
+[Name] == Great Hauberk && [Quality] == Magic # [99] == 24 && [Sockets] == 4
+//巨型鳞铠胸甲
+
+//*****野蛮人 战斗体制 头盔 MAGIC+*****
+[Name] == Jawbone Cap && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//颚骨帽，+2战斗体制，+3呐喊
+[Name] == Jawbone Cap && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//颚骨帽，+3战斗体制，+2呐喊
+[Name] == Jawbone Cap && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//颚骨帽，+3战斗体制，+2野蛮人技能
+[Name] == Fanged helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//尖牙盔，+2战斗体制，+3呐喊
+[Name] == Fanged helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//尖牙盔，+3战斗体制，+2呐喊
+[Name] == Fanged helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//尖牙盔，+3战斗体制，+2野蛮人技能
+[Name] == Horned Helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//角盔，+2战斗体制，+3呐喊
+[Name] == Horned Helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//角盔，+3战斗体制，+2呐喊
+[Name] == Horned Helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//角盔，+3战斗体制，+2野蛮人技能
+[Name] == Assault Helmet && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//突击盔，+2战斗体制，+3呐喊
+[Name] == Assault Helmet && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//突击盔，+3战斗体制，+2呐喊
+[Name] == Assault Helmet && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//突击盔，+3战斗体制，+2野蛮人技能
+[Name] == Avenger guard && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//复仇者之盔，+2战斗体制，+3呐喊
+[Name] == Avenger guard && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//复仇者之盔，+3战斗体制，+2呐喊
+[Name] == Avenger guard && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//复仇者之盔，+3战斗体制，+2野蛮人技能
+[Name] == Jawbone Visor && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//颚骨面甲，+2战斗体制，+3呐喊
+[Name] == Jawbone Visor && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//颚骨面甲，+3战斗体制，+2呐喊
+[Name] == Jawbone Visor && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//颚骨面甲，+3战斗体制，+2野蛮人技能
+[Name] == Lion helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//狮头尖盔，+2战斗体制，+3呐喊
+[Name] == Lion helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//狮头尖盔，+3战斗体制，+2呐喊
+[Name] == Lion helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//狮头尖盔，+3战斗体制，+2野蛮人技能
+[Name] == Rage Mask && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//狂怒面具刺盔，+2战斗体制，+3呐喊
+[Name] == Rage Mask && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//狂怒面具刺盔，+3战斗体制，+2呐喊
+[Name] == Rage Mask && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//狂怒面具刺盔，+3战斗体制，+2野蛮人技能
+[Name] == Savage Helmet && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//蛮族头盔，+2战斗体制，+3呐喊
+[Name] == Savage Helmet && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//蛮族头盔，+3战斗体制，+2呐喊
+[Name] == Savage Helmet && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//蛮族头盔，+3战斗体制，+2野蛮人技能
+[Name] == Slayer Guard && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//杀手防护面甲，+2战斗体制，+3呐喊
+[Name] == Slayer Guard && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//杀手防护面甲，+3战斗体制，+2呐喊
+[Name] == Slayer Guard && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//杀手防护面甲，+3战斗体制，+2野蛮人技能
+[Name] == Carnage Helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] >= 2 && [warcriesskilltab] == 3
+//屠杀头盔，+2战斗体制，+3呐喊
+[Name] == Carnage Helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [warcriesskilltab] == 2
+//屠杀头盔，+3战斗体制，+2呐喊
+[Name] == Carnage Helm && ([Quality] == Rare || [Quality] == Magic) # [skillbattleorders] == 3 && [barbarianskills] == 2
+//屠杀头盔，+3战斗体制，+2野蛮人技能
+
+//*****3技/IAS 蓝装手套*****
+[Type] == Gloves && [Quality] == Magic # [javelinandspearskilltab] == 3 && [IAS] == 20
+//+3标技，20%IAS
+//[Type] == Gloves && [Quality] == Magic # [bowandcrossbowskilltab] == 3 && [IAS] == 20
+//+3弓技，20%IAS
+//[Type] == Gloves && [Quality] == Magic # [passiveandMagicskilltab] == 3 && [IAS] == 20
+//+3被动技，20%IAS
+//[Type] == Gloves && [Quality] == Magic # [MartialArtsskilltab] == 3 && [IAS] == 20
+//+3武学，，20%IAS
+
+//***** +5火球/闪电 20%高施 法杖*****
+[Type] == orb && ([Quality] == Rare || [Quality] == Magic) # ([skillfireball]+[fireskilltab] >= 5 || [skillfireball]+[sorceressskills] >= 5) && [FCR] >= 20
+//+5火球以上，+20%高施
+[Type] == orb && ([Quality] == Rare || [Quality] == Magic) # ([skilllightning]+[lightningskilltab] >= 5 || [skilllightning]+[sorceressskills] >= 5) && [FCR] >= 20
+//+5闪电以上，+20%高施
+
+//*****强化 法杖*****
+[Type] == orb && ([Quality] == Rare || [Quality] == Magic) # ([skillenchant]+[fireskilltab] >= 5 || [skillenchant]+[sorceressskills] >= 5)
+//+5强化以上
+
+//*****+5雷光守卫 爪*****
+[Type] == Assassinitem && [Quality] == Rare # ([Assassin skills] >= 2 && [skilllightningsentry] == 3 || [itemaddtrapsskilltab] == 3 && [skilllightningsentry] >= 2 || [itemaddtrapsskilltab] >= 2 && [skilllightningsentry] == 3)
+//+5以上雷光守卫
+[Type] == Assassinclaw && [Quality] == Magic # ([Assassin skills] >= 2 && [skilllightningsentry] == 3 || [itemaddtrapsskilltab] == 3 && [skilllightningsentry] == 3)
+//+5以上雷光守卫
+
+//*****死灵盾*****
+[Type] == Voodooheads && ([Quality] == Rare || [Quality] == Magic) # ([poisonandboneskilltab]+[skillbonespear] >= 5 || [necromancer skills]+[skillbonespear] >= 5 || [poisonandboneskilltab]+[skillbonespirit] >= 5 || [necromancer skills]+[skillbonespirit] >= 5) && ([Sockets] == 2 || ([39]+[43] >= 40 || [39]+[41] >= 40 || [41]+[43] >= 40) || [toblock] == 20 && [102] == 30 || [FHR] == 17)
+
+//******* 白装 部份 ***** [wh01]
+
+//***** 白装 盔甲 ***** [wa01]
+
+//*****超强的 15%ED 有形 0/3/4洞 白装 盔甲*****
+//[Name] == Ghost Armor && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//鬼魂战甲(15%ED，有形)
+//[Name] == Linked Mail && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//连扣战甲(15%ED，有形)
+//[Name] == Tigulated Mail && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//提格莱特战甲(15%ED，有形)
+//[Name] == Cuirass && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//护胸甲(15%ED，有形)
+//[Name] == Mesh Armor && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//织网战甲(15%ED，有形)
+//[Name] == Russet Armor && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//罗瑟战甲(15%ED，有形)
+//[Name] == Sharktooth Armor && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//鲨齿战甲(15%ED，有形)
+//[Name] == Templar Coat && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//圣堂武士外袍(15%ED，有形)
+//[Name] == Embossed Plate && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//凸纹战甲(15%ED，有形)
+//[Name] == Chaos Armor && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//混沌战甲(15%ED，有形)
+//[Name] == Ornate Plate && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//华丽战甲(15%ED，有形)
+[Name] == Mage Plate && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3)
+//法师铠甲(15%ED，有形)
+//[Name] == Diamond Mail && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//钻石锁子甲(15%ED，有形)
+//[Name] == Loricated Mail && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//甲壳铠鳞甲(15%ED，有形)
+//[Name] == Kraken Shell && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//海妖壳甲(15%ED，有形)
+//[Name] == Hellforge Plate && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//地狱锻甲(15%ED，有形)
+//[Name] == Lacquered Plate && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//漆甲(15%ED，有形)
+//[Name] == Shadow Plate && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//阴影铠甲(15%ED，有形)
+//[Name] == Boneweave && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//骸骨链甲(15%ED，有形)
+//[Name] == Balrog Skin && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//炎魔皮板甲(15%ED，有形)
+[Name] == Dusk Shroud && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//灰暮寿衣(15%ED，有形)
+[Name] == Wyrmhide && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//古龙皮(15%ED，有形)
+[Name] == Scarab Husk && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//圣甲虫壳皮甲(15%ED，有形)
+[Name] == Wire fleece && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//线羊毛皮甲(15%ED，有形)
+[Name] == Great Hauberk && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//巨型鳞铠胸(15%ED，有形)
+[Name] == Archon Plate && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//执政官铠甲(15%ED，有形)
+[Name] == Sacred Armor && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] == 15 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//神圣盔甲(15%ED，有形)
+
+//*****0洞 无形 白装 盔甲 (暴防甲)*****
+[Name] == Scarab Husk && [Quality] < Superior && [Flag] == ethereal # [31] >= 680 && [Sockets] == 0
+//圣甲虫壳皮甲(0洞，无形，680防以上)
+[Name] == Diamond Mail && [Quality] < Superior && [Flag] == ethereal # [31] >= 704 && [Sockets] == 0
+//钻石锁子甲(0洞，无形，704防以上)
+[Name] == Loricated Mail && [Quality] < Superior && [Flag] == ethereal # [31] >= 714 && [Sockets] == 0
+//甲壳铠鳞甲(0洞，无形，714防以上)
+[Name] == Wyrmhide && [Quality] < Superior && [Flag] == ethereal # [31] >= 675 && [Sockets] == 0
+//古龙皮(0洞，无形，675防以上)
+[Name] == Wire fleece && [Quality] < Superior && [Flag] == ethereal # [31] >= 692 && [Sockets] == 0
+//线羊毛皮甲(0洞，无形，692防以上)
+[Name] == Great Hauberk && [Quality] < Superior && [Flag] == ethereal # [31] >= 720 && [Sockets] == 0
+//巨型鳞铠胸甲(0洞，无形，720防以上)
+[Name] == Boneweave && [Quality] < Superior && [Flag] == ethereal # [31] >= 720 && [Sockets] == 0
+//骸骨链甲(0洞，无形，720防以上)
+[Name] == Balrog skin && [Quality] < Superior && [Flag] == ethereal # [31] >= 735 && [Sockets] == 0
+//炎魔皮板甲(0洞，无形，735防以上)
+[Name] == Archon Plate && [Quality] < Superior && [Flag] == ethereal # [31] >= 745 && [Sockets] == 0
+//执政官铠甲(0洞，无形，745防以上)
+[Name] == Kraken Shell && [Quality] < Superior && [Flag] == ethereal # [31] >= 745 && [Sockets] == 0
+//海妖壳甲(0洞，无形，745防以上)
+[Name] == Hellforge Plate && [Quality] < Superior && [Flag] == ethereal # [31] >= 750 && [Sockets] == 0
+//地狱锻甲(0洞，无形，750防以上)
+[Name] == Lacquered Plate && [Quality] < Superior && [Flag] == ethereal # [31] >= 765 && [Sockets] == 0
+//漆甲(0洞，无形，765防以上)
+[Name] == Shadow Plate && [Quality] < Superior && [Flag] == ethereal # [31] >= 790 && [Sockets] == 0
+//阴影铠甲(0洞，无形，790防以上)
+[Name] == Sacred Armor && [Quality] < Superior && [Flag] == ethereal # [31] >= 850 && [Sockets] == 0
+//神圣盔甲(0洞，无形，850防以上)
+
+//*****超强的 白装 头盔*****
+//[Name] == Grand Crown && [Quality] <= Superior && [Flag] == ethereal # [31] >= 160 && [Sockets] == 0
+//巨皇冠(0洞，无形，160防以上)
+//[Name] == Grand Crown && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] >= 15 && ([Sockets] == 0 || [Sockets] == 3)
+//巨皇冠(0/3洞，有形，15%ED)
+//[Name] == Demonhead && [Quality] <= Superior && [Flag] == ethereal # [31] >= 220 && [Sockets] == 0
+//恶魔头盖骨面具(0洞，无形，220防以上)
+//[Name] == Demonhead && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] >= 15 && ([Sockets] == 0 || [Sockets] == 3)
+//恶魔头盖骨面具(0/3洞，有形，15%ED)
+//[Name] == Bone Visage && [Quality] <= Superior && [Flag] == ethereal # [31] >= 225 && [Sockets] == 0
+//骸骨面罩(0洞，无形，225防以上)
+//[Name] == Bone Visage && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] >= 15 && ([Sockets] == 0 || [Sockets] == 3)
+//骸骨面罩(0/3洞，有形，15%ED)
+[Name] == Diadem && [Quality] <= Superior && [Flag] == ethereal # [31] >= 85 && [Sockets] == 0
+//权冠(0洞，无形，85防以上)
+[Name] == Diadem && [Quality] <= Superior && [Flag] != ethereal # [EnhancedDefense] >= 15 && ([Sockets] == 0 || [Sockets] == 3)
+//权冠(0/3洞，有形，15%ED)
+
+//*****超强的 白装 盾*****
+//[Name] == Troll Nest && [Quality] <= Superior && [Flag] == ethereal # [31] >= 250 && [Sockets] == 0
+//洞穴巨魔巢穴骨盾(0洞，无形，250防以上)
+//[Name] == Troll Nest && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] >= 15 && [Sockets] == 0
+//洞穴巨魔巢穴骨盾(0洞，有形，15%ED)
+//[Name] == Troll Nest && [Quality] == Superior && [Flag] != ethereal # [EnhancedDefense] >= 15 && [Sockets] == 3
+//洞穴巨魔巢穴骨盾(3洞，有形，15%ED)
+
+//*****圣骑盾*****
+[Name] == Sacred Targe && [Quality] <= Superior && [Flag] == ethereal # [31] >= 220 && [39] >= 40 && ([Sockets] == 0 || [Sockets] == 4)
+//神圣小盾(0/4洞，无形，40抗以上，220防以上)
+[Name] == Sacred Targe && [Quality] <= Superior && [Flag] != ethereal # [39] >= 40 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//神圣小盾(0/3/4洞，有形，40抗以上)
+[Name] == Sacred Targe && [Quality] <= Superior && [Flag] == ethereal # [31] >= 220 && [EnhancedDamage] >= 60 && ([Sockets] == 0 || [Sockets] == 4)
+//神圣小盾(0/4洞，无形，60%ED以上，220防以上)
+[Name] == Sacred Rondache && [Quality] <= Superior && [Flag] == ethereal # [31] >= 230 && [39] >= 40 && ([Sockets] == 0 || [Sockets] == 4)
+//神圣轻圆盾(0/4洞，无形，40抗以上，230防以上)
+[Name] == Sacred Rondache && [Quality] <= Superior && [Flag] != ethereal # [39] >= 40 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//神圣轻圆盾(0/3/4洞，有形，40抗以上)
+[Name] == Sacred Rondache && [Quality] <= Superior && [Flag] == ethereal # [31] >= 230 && [EnhancedDamage] >= 60 && ([Sockets] == 0 || [Sockets] == 4)
+//神圣轻圆盾(0/4洞，无形，60%ED以上，230防以上)
+[Name] == Kurast Shield && [Quality] <= Superior && [Flag] == ethereal # [31] >= 240 && [39] >= 40 && ([Sockets] == 0 || [Sockets] == 4)
+//库拉斯特之盾(0/4洞，无形，40抗以上，240防以上)
+[Name] == Kurast Shield && [Quality] <= Superior && [Flag] != ethereal # [39] >= 40 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//库拉斯特之盾(0/3/4洞，有形，40抗以上)
+[Name] == Kurast Shield && [Quality] <= Superior && [Flag] == ethereal # [31] >= 240 && [EnhancedDamage] >= 60 && ([Sockets] == 0 || [Sockets] == 4)
+//库拉斯特之盾(0/4洞，无形，60%ED以上，240防以上)
+[Name] == Zakarum Shield && [Quality] <= Superior && [Flag] == ethereal # [31] >= 270 && [39] >= 40 && ([Sockets] == 0 || [Sockets] == 4)
+//撒卡兰姆盾牌(0/4洞，无形，40抗以上，270防以上)
+[Name] == Zakarum Shield && [Quality] <= Superior && [Flag] != ethereal # [39] >= 40 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//撒卡兰姆盾牌(0/3/4洞，有形，40抗以上)
+[Name] == Zakarum Shield && [Quality] <= Superior && [Flag] == ethereal # [31] >= 270 && [EnhancedDamage] >= 55 && ([Sockets] == 0 || [Sockets] == 4)
+//撒卡兰姆盾牌(0/4洞，无形，55%ED以上，270防以上)
+[Name] == Vortex Shield && [Quality] <= Superior && [Flag] == ethereal # [31] >= 300 && [39] >= 40 && ([Sockets] == 0 || [Sockets] == 4)
+//旋风盾(0/4洞，无形，40抗以上，300防以上)
+[Name] == Vortex Shield && [Quality] <= Superior && [Flag] != ethereal # [39] >= 40 && ([Sockets] == 0 || [Sockets] == 3 || [Sockets] == 4)
+//旋风盾(0/3/4洞，有形，40抗以上)
+[Name] == Vortex Shield && [Quality] <= Superior && [Flag] == ethereal # [31] >= 300 && [EnhancedDamage] >= 55 && ([Sockets] == 0 || [Sockets] == 4)
+//旋风盾(0/4洞，无形，55%ED以上，3000防以上)
+
+//***** 德鲁伊专用头盔*****
+
+//*****召唤灰熊 头盔*****
+//[Name] == Wolf Head && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//狼头(+3召唤灰熊，3洞)
+//[Name] == Hawk Helm && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//飞鹰头盔(+3召唤灰熊，3洞)
+//[Name] == Antlers && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//鹿角(+3召唤灰熊，3洞)
+//[Name] == Falcon Mask && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//猎鹰面具(+3召唤灰熊，3洞)
+//[Name] == Spirit Mask && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//灵魂狼头面具(+3召唤灰熊，3洞)
+//[Name] == Alpha Helm && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//阿尔发头盔(+3召唤灰熊，3洞)
+//[Name] == Griffon Headdress && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//狮鹫兽头带(+3召唤灰熊，3洞)
+//[Name] == Hunter's Guise && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//猎人的伪装(+3召唤灰熊，3洞)
+//[Name] == Sacred Feathers && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//神圣羽毛头带(+3召唤灰熊，3洞)
+//[Name] == Totemic Mask && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//图腾面具狼盔(+3召唤灰熊，3洞)
+//[Name] == Blood Spirit && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//血腥之灵(+3召唤灰熊，3洞)
+//[Name] == Sun Spirit && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//太阳之灵(+3召唤灰熊，3洞)
+//[Name] == Earth Spirit && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//大地之灵(+3召唤灰熊，3洞)
+//[Name] == Sky Spirit && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//天空之灵(+3召唤灰熊，3洞)
+//[Name] == Dream Spirit && [Quality] <= Superior # [skillSummonGrizzly] == 3 && [Sockets] == 3
+//幽梦之灵(+3召唤灰熊，3洞)
+
+//*****龙卷风 头盔(余同上)*****
+//[Name] == Wolf Head && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Hawk Helm && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Antlers && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Falcon Mask && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Spirit Mask && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Alpha Helm && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Griffon Headdress && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Hunter's Guise && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Sacred Feathers && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Totemic Mask && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Blood Spirit && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Sun Spirit && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Earth Spirit && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Sky Spirit && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+//[Name] == Dream Spirit && [Quality] <= Superior # [skillTornado] == 3 && [Sockets] == 3
+
+//*****梦境 头饰*****
+//[Type] == Circlet && [Quality] <= Superior && [Flag] != ethereal # [Sockets] == 3
+//3洞有形头饰类
+
+//***** 白色 武器 ***** [ww01]
+
+//*****武器镶材*****
+//[Type] == Polearm && [Class] >= exceptional && [Quality] <= Superior && [Flag] == ethereal # [Sockets] == 4
+//长柄类武器(无形，4洞)
+//[Type] == Polearm && [Class] >= exceptional && [Quality] < Superior && [Flag] == ethereal # [Sockets] == 0
+//长柄类武器(无形，0洞)
+//[Name] == Broad Sword && [Quality] <= Superior # [Sockets] == 4
+//阔剑(4洞，低力精神剑镶材)
+[Name] == Berserker Axe && [Quality] < Superior && [Flag] == ethereal # [Sockets] == 0
+//狂战士斧(0洞，无形)
+[Name] == Berserker Axe && [Quality] <= Superior && [Flag] == ethereal # [Sockets] == 5
+//狂战士斧(5洞，无形)
+[Name] == Berserker Axe && [Quality] == Superior && [Flag] != ethereal # [EnhancedDamage] >= 10 && [Sockets] == 0
+//狂战士斧(0洞，10%ED以上，有形)
+[Name] == Crystal Sword && [Quality] <= Superior # [Sockets] == 5
+//水晶剑(5洞)
+//[Name] == Crystal Sword && [Quality] <= Superior # [Sockets] == 6
+//水晶剑(6洞))
+//[Name] == Flail && [Quality] <= Superior # ([Sockets] == 4 || [Sockets] == 5)
+//连枷(5洞)
+[Name] == Phase Blade && [Quality] == Superior # [EnhancedDamage] == 15 && ([Sockets] == 0 || [Sockets] == 6)
+//幻化之刃(0/6洞，15%ED)
+//[Name] == Colossus Blade && [Quality] == Superior && [Flag] == ethereal # [EnhancedDamage] ==15 && [Sockets] == 0
+//巨神之刃(0洞，15%ED，无形)
+//[Name] == War Pike && [Quality] == Superior && [Flag] == ethereal # [EnhancedDamage] >= 10 && [Sockets] == 0
+//战枪(10%ED以上，无形)
+//[Name] == Ghost Spear && [Quality] == Superior && [Flag] == ethereal # [EnhancedDamage] >= 10
+//鬼魂之矛(10%ED以上，无形)
+//[Name] == Cryptic Axe && [Quality] < Superior && [Flag] == ethereal # [Sockets] == 0
+//神秘之斧(0洞，无形)
+[Name] == Cryptic Axe && [Quality] <= Superior && [Flag] == ethereal # [Sockets] == 4
+//神秘之斧(4洞，无形)
+[Name] == Colossus Voulge && [Quality] <= Superior && [Flag] == ethereal # [Sockets] == 0
+//巨神之斧(0洞，无形)
+[Name] == Colossus Voulge && [Quality] <= Superior && [Flag] == ethereal # [Sockets] == 4
+//巨神之斧(4洞，无形)
+//[Name] == Thresher && [Quality] < Superior && [Flag] == ethereal # [Sockets] == 0
+//锐利之斧(0洞，无形)
+[Name] == Thresher && [Quality] <= Superior && [Flag] == ethereal # [Sockets] == 4
+//锐利之斧(4洞，无形)
+//[Name] == Giant Thresher && [Quality] < Superior && [Flag] == ethereal # [Sockets] == 0
+//鲛尾巨斧(0洞，无形)
+[Name] == Giant Thresher && [Quality] <= Superior && [Flag] == ethereal # [Sockets] == 4
+//鲛尾巨斧(4洞，无形)
+//[Name] == Great Poleaxe && [Quality] < Superior && [Flag] == ethereal # [Sockets] == 0
+//巨长斧(0洞，无形)
+[Name] == Great Poleaxe && [Quality] <= Superior && [Flag] == ethereal # [Sockets] == 4
+//巨长斧(4洞，无形)
+[Name] == Matriarchal Bow && [Quality] == Superior # [EnhancedDamage] >= 10 && [bowandcrossbowskilltab] == 3 && [Sockets] == 4
+//女族长之弓(4洞，3弓，10%ED以上)
+[Name] == Grand Matron Bow   && [Quality] == Superior # [EnhancedDamage] >= 10 && [bowandcrossbowskilltab] == 3 && [Sockets] == 4
+//大院长之弓(4洞，3弓，10%ED以上)
+//[Name] == Great Bow && [Quality] == Superior # [EnhancedDamage] == 15 && [Sockets] == 4
+//巨弓(4洞，15%ED)
+
+//*****死灵杖白色镶材*****
+//[Name] == Bone Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Bone Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Bone Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Bone Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Bone Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Bone Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+//[Name] == Grim Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Grim Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Grim Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Grim Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Grim Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Grim Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+//[Name] == Petrified Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Petrified Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Petrified Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Petrified Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Petrified Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Petrified Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+//[Name] == Tomb Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Tomb Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Tomb Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Tomb Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Tomb Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Tomb Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+//[Name] == Grave Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Grave Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Grave Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Grave Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Grave Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Grave Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+//[Name] == Polished Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Polished Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Polished Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Polished Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Polished Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Polished Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+//[Name] == Ghost Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Ghost Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Ghost Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Ghost Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Ghost Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Ghost Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+//[Name] == Lich Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Lich Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Lich Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Lich Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Lich Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Lich Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+//[Name] == Unearthed Wand && [Quality] <= Superior # [skillpoisonnova] == 3 && [skillDecrepify] >= 2
+//[Name] == Unearthed Wand && [Quality] <= Superior # [skillbonespirit] == 3 && [skillDecrepify] >= 2
+//[Name] == Unearthed Wand && [Quality] <= Superior # [skillpoisonnova] >= 2 && [skillbonespirit] >= 2
+//[Name] == Unearthed Wand && [Quality] <= Superior # [skillbonespear] >= 2 && [skillbonespirit] >= 2
+//[Name] == Unearthed Wand && [Quality] <= Superior # [skillbonespear] == 3 && [skillbonespirit] >= 1
+//[Name] == Unearthed Wand && [Quality] <= Superior # [skillbonespear] >= 1 && [skillbonespirit] == 3
+
+//*****圣骑白装权杖*****
+[Name] == War scepter && [Quality] <= Superior # [skillConviction] == 3 && ([Sockets] == 0 || [Sockets] == 5)
+//+3信念巨战权杖(0洞 或 5洞)
+[Name] == War scepter && [Quality] <= Superior # [skillZeal] == 3 && ([Sockets] == 0 || [Sockets] == 5)
+//+3白热巨战权杖(0洞 或 5洞)
+[Name] == Divine scepter && [Quality] <= Superior # [skillConviction] == 3 && ([Sockets] == 0 || [Sockets] == 5)
+//+3信念神属权杖(0洞 或 5洞)
+[Name] == Divine scepter && [Quality] <= Superior # [skillZeal] == 3 && ([Sockets] == 0 || [Sockets] == 5)
+//+3白热神属权杖(0洞 或 5洞)
+[Name] == Caduceus && [Quality] <= Superior # [skillConviction] == 3 && ([Sockets] == 0 || [Sockets] == 5)
+//+3信念神使之杖(0洞 或 5洞)
+[Name] == Caduceus && [Quality] <= Superior # [skillZeal] == 3 && ([Sockets] == 0 || [Sockets] == 5)
+//+3白热神使之杖(0洞 或 5洞)
+
+//*****ASSASSIN WHITE CLAWS*****
+//[Name] == Greater Talons && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 0
+//[Name] == Greater Talons && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 0
+//[Name] == Greater Talons && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 0
+//[Name] == Greater Talons && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 0
+//[Name] == Greater Talons && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 3
+//[Name] == Greater Talons && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 3
+//[Name] == Greater Talons && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 3
+//[Name] == Greater Talons && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 3
+//[Name] == Greater Claws && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 0
+//[Name] == Greater Claws && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 0
+//[Name] == Greater Claws && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 0
+//[Name] == Greater Claws && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 0
+//[Name] == Greater Claws && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 3
+//[Name] == Greater Claws && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 3
+//[Name] == Greater Claws && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 3
+//[Name] == Greater Claws && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 3
+//[Name] == Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 0
+//+2飞龙在天/+2闪电陷阱 近身刃 0孔
+//[Name] == Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 0
+//+2飞龙在天/+2心灵振爆 近身刃 0孔
+//[Name] == Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 0
+//+1影子大师/+1武器格挡/+1毒牙 近身刃 0孔
+//[Name] == Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 0
+//+2闪电陷阱/+2复苏狱火 近身刃 0孔
+//[Name] == Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 3
+//+2飞龙在天/+2闪电陷阱 近身刃 3孔
+//[Name] == Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 3
+//+2飞龙在天/+2心灵振爆 近身刃 3孔
+//[Name] == Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 3
+//+1影子大师/+1武器格挡/+1毒牙 近身刃 3孔
+//[Name] == Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 3
+//+2闪电陷阱/+2复苏狱火 近身刃 3孔
+//[Name] == Runic Talons && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 0
+//+2飞龙在天/+2闪电陷阱 符纹爪 0孔
+//[Name] == Runic Talons && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 0
+//+2飞龙在天/+2心灵振爆 符纹爪 0孔
+//[Name] == Runic Talons && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 0
+//+1影子大师/+1武器格挡/+1毒牙 符纹爪 0孔
+//[Name] == Runic Talons && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 0
+//+2闪电陷阱/+2复苏狱火 符纹爪 0孔
+//[Name] == Runic Talons && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 3
+//+2飞龙在天/+2闪电陷阱 符纹爪 3孔
+//[Name] == Runic Talons && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 3
+//+2飞龙在天/+2心灵振爆 符纹爪 3孔
+//[Name] == Runic Talons && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 3
+//+1影子大师/+1武器格挡/+1毒牙 符纹爪 3孔
+//[Name] == Runic Talons && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 3
+//+2闪电陷阱/+2复苏狱火 符纹爪 3孔
+//[Name] == Scissors Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 0
+//+2飞龙在天/+2闪电陷阱 近身剪 0孔
+//[Name] == Scissors Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 0
+//+2飞龙在天/+2心灵振爆 近身剪 0孔
+//[Name] == Scissors Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 0
+//+1影子大师/+1武器格挡/+1毒牙 近身剪 0孔
+//[Name] == Scissors Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 0
+//+2闪电陷阱/+2复苏狱火 近身剪 0孔
+//[Name] == Scissors Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skilllightningsentry] >= 2 && [Sockets] == 3
+//+2飞龙在天/+2闪电陷阱 近身剪 3孔
+//[Name] == Scissors Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilldragonflight] >= 2 && [skillmindblast] >= 2 && [Sockets] == 3
+//+2飞龙在天/+2心灵振爆 近身剪 3孔
+//[Name] == Scissors Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skillshadowmaster] >= 1 && [skillweaponblock] >= 1 && [skillvenom] >= 1 && [Sockets] == 3
+//+1影子大师/+1武器格挡/+1毒牙 近身剪 3孔
+//[Name] == Scissors Suwayyah && [Quality] <= Superior && [Flag] != ethereal # [skilllightningsentry] >= 2 && [skillwakeofinferno] >= 2 && [Sockets] == 3
+//+2闪电陷阱/+2复苏狱火 近身剪 3孔
+
+//*****精神 镶材 剑/盾*****
+//[Name] == Crystal Sword && [Quality] <= Superior # [Sockets] == 4
+//水晶剑(4洞)
+[Name] == Monarch && [Quality] == Superior && [Flag] != ethereal # ([EnhancedDefense] >= 15 || [31] >= 140) && ([Sockets] == 0 || [Sockets] == 4)
+//统治者大盾(0/4洞，有形，15%ED/140防以上)
+[Name] == Monarch && [Quality] <= Superior && [Flag] == ethereal # [31] >= 190 && [Sockets] == 0
+//统治者大盾(0洞，无形，190防以上)
+
+//****** 符文 部分 ****** [ru01]
+
+//[Name] == El rune
+//艾尔
+//[Name] == Eld rune
+//艾德
+//[Name] == Tir rune
+//特尔
+//[Name] == Nef rune
+//那夫
+//[Name] == Eth rune
+//爱斯
+//[Name] == Ith rune
+//伊司
+//[Name] == Tal rune
+//塔尔
+//[Name] == Ral Rune
+//拉尔
+//[Name] == Ort Rune
+//欧特
+//[Name] == Thul Rune
+//书尔
+//[Name] == Amn rune
+//安姆
+//[Name] == Sol rune
+//索尔
+//[Name] == Shael rune
+//夏
+//[Name] == Dol rune
+//多尔
+//[Name] == Hel rune
+//海尔
+//[Name] == Io rune
+//破
+//[Name] == Lum rune
+//卢姆
+//[Name] == Ko rune
+//科
+//[Name] == Fal rune
+//法尔
+[Name] == Lem rune
+//蓝姆
+[Name] == Pul rune
+//普尔
+[Name] == Um rune
+//乌姆
+[Name] == Mal rune
+//马尔
+[Name] == Ist rune
+//伊斯特
+[Name] == Gul rune
+//古尔
+[Name] == Vex rune
+//伐克斯
+[Name] == Ohm rune
+//欧姆
+[Name] == Lo rune
+//罗
+[Name] == Sur rune
+//瑟
+[Name] == Ber rune
+//贝
+[Name] == Jah rune
+//乔
+[Name] == Cham rune
+//查姆
+[Name] == Zod rune
+//萨德
+
+//*****药水 部份***** [rj01]
+//[Name] == Rejuvenation Potion
+//小紫
+[Name] == Full Rejuvenation Potion
+//大紫
+[Name] == Super Healing Potion
+//大红
+[Name] == Super Mana Potion
+//大蓝
+
+//***** 钥匙 部份 ***** [ke01]
+//[Name] == Key of Terror
+//恐惧之钥
+[Name] == Key of Hate
+//憎恨之钥
+[Name] == Key of Destruction
+//毁灭之钥
+
+//***** 精华 部份 ***** [es01]
+//[Name] == twistedessenceofsuffering
+//扭曲的痛苦精华
+//[Name] == chargedessenseofhatred
+//充盈的憎恨精华
+[Name] == burningessenceofterror
+//燃烧的恐惧精华
+//[Name] == festeringessenceofdestruction
+//溃烂的毁灭精华
